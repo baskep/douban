@@ -1,0 +1,557 @@
+
+#content h2 {
+    color: #007722;
+}
+.indent {
+    margin-bottom: 30px;
+}
+.related-info h2, .related-pic h2, #recommendations h2 {
+    margin: 24px 0 3px;
+}
+.comment_btn {
+    background: #fae9da none repeat scroll 0 0;
+    border-radius: 2px;
+    color: #ca6445;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 12px;
+}
+.comment_btn:link, .comment_btn:visited {
+    background: #fae9da none repeat scroll 0 0;
+    color: #ca6445;
+}
+.comment_btn:hover, .comment_btn:active {
+    background: #fcefe3 none repeat scroll 0 0;
+    color: #d9896a;
+}
+.comment_btn {
+    float: right;
+}
+.year {
+    display: inline-block;
+}
+.bs li {
+    position: relative;
+}
+.bs li:last-of-type {
+    border: medium none;
+}
+.discussion_link a {
+    color: #999;
+    font-size: 14px;
+}
+.discussion_link a:hover {
+    background: #999 none repeat scroll 0 0;
+    color: #fff;
+}
+#mainpic img {
+    max-width: 100px;
+}
+.more-actor, .more-actor:link {
+    color: #aaa;
+}
+.more-actor:hover {
+    background: #aaa none repeat scroll 0 0;
+    color: #fff;
+}
+#interest_sectl .rating_wrap .output-btn-wrap {
+    display: none;
+    line-height: 1;
+    margin-right: 27px;
+}
+#interest_sectl .rating_wrap .output-btn-wrap img {
+    height: 12px;
+    vertical-align: top;
+    width: 12px;
+}
+#interest_sectl .rating_wrap:hover .output-btn-wrap {
+    display: block;
+}
+#celebrities * {
+    box-sizing: border-box;
+}
+#celebrities .celebrities-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#celebrities .celebrities-list li {
+    display: inline-block;
+    flex: 0 0 75px;
+}
+#celebrities .celebrities-list li.fake {
+    margin-right: 0;
+}
+#celebrities .celebrities-list li.fake1 {
+    display: inline-block;
+    flex: 1 0 75px;
+}
+#celebrities .celebrities-list li.fake2 {
+    display: inline-block;
+    flex: 2 0 75px;
+}
+#celebrities .celebrities-list li.fake3 {
+    display: inline-block;
+    flex: 3 0 75px;
+}
+#celebrities .celebrities-list li.fake4 {
+    display: inline-block;
+    flex: 4 0 75px;
+}
+#celebrities .celebrities-list li.fake5 {
+    display: inline-block;
+    flex: 5 0 75px;
+}
+#celebrities .celebrities-list.from-subject li .info {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#celebrities .celebrities-list.from-subject li .has-account ~ .info > span:not(.works) {
+    width: 98.3333px;
+}
+#celebrities .celebrities-list.from-subject li:first-child .avatar {
+    margin-left: 0;
+}
+#celebrities .celebrities-list.from-subject li:first-child .info > span:not(.works) {
+    width: 80px;
+}
+#celebrities .celebrities-list.from-subject li:first-child .has-account ~ .info > span:not(.works) {
+    width: 90px;
+}
+#celebrities .celebrities-list .avatar {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 75px 105px;
+    height: 105px;
+    margin: 0 auto;
+}
+#celebrities .celebrities-list .avatar.has-account {
+    background-position: 0 84px, center center;
+    background-size: 44px 17px, 75px 105px;
+    width: 80px;
+}
+#celebrities .celebrities-list .info {
+    display: block;
+    margin: 6px auto 0;
+    text-align: center;
+}
+#celebrities .celebrities-list .info > span:not(.works) {
+    color: #9b9b9b;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 88.3333px;
+}
+#celebrities .celebrities-list .info a.name:hover {
+    background: #37a none repeat scroll 0 0;
+    color: white;
+}
+#celebrities .celebrities-list .info span.name a {
+    color: #111;
+}
+.related-pic {
+    margin-bottom: 30px;
+}
+.related-pic-hd span {
+    font-size: 12px;
+}
+.related-pic-hd a {
+    margin-right: 8px;
+}
+.related-pic-bd {
+    letter-spacing: -0.31em;
+    margin-right: -3px;
+    overflow: hidden;
+}
+.related-pic-bd li {
+    display: inline-block;
+    letter-spacing: normal;
+    margin-right: 15px;
+    vertical-align: top;
+}
+.related-pic-bd.narrow li {
+    margin-right: 2px;
+}
+.related-pic-video {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 178px;
+}
+.related-pic-video span {
+    background: rgba(0, 0, 0, 0.25) url("/f/movie/fafc0935c2a3a38023f246f6ea76f249a7b2d758/pics/movie/play_btn.png") no-repeat scroll center center;
+    display: block;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    width: 178px;
+}
+.related-pic-add {
+    background-color: #f7f7f7;
+    font-size: 14px;
+    height: 100px;
+    line-height: 100px;
+    width: 100px;
+}
+.related-pic-add a {
+    display: block;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+}
+.related-pic-add a:link, .related-pic-add a:visited, .related-pic-add a:hover, .related-pic-add a:focus, .related-pic-add a:active {
+    background-color: #f7f7f7;
+    color: #bcbcbc;
+}
+.related-pic-hd .dots {
+    margin: 0 1em;
+}
+#recommendations .recommendations-bd {
+    letter-spacing: -0.31em;
+    margin-right: -18px;
+}
+#recommendations .recommendations-bd dl {
+    display: inline-block;
+    letter-spacing: normal;
+    margin: 0 18px 15px 0;
+    overflow: hidden;
+    vertical-align: top;
+    word-spacing: normal;
+}
+#recommendations .recommendations-bd dt, #recommendations .recommendations-bd dd {
+    width: 100px;
+}
+#recommendations .recommendations-bd dt {
+    height: 145px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+#recommendations .recommendations-bd dd {
+    font-size: 13px;
+    text-align: center;
+}
+.Comments-sortby > span, .Comments-sortby > a {
+    margin-right: 10px;
+}
+.Comments-sortby > a:visited {
+    color: #37a;
+}
+.Comments-sortby > a:hover {
+    color: #fff;
+}
+.Comments-sortby > span {
+    cursor: default;
+}
+.fold-hd {
+    margin-bottom: 15px;
+    padding: 15px 0;
+    position: relative;
+}
+.fold-hd::before {
+    background: #ddd none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transform: scaleY(0.5);
+    transform-origin: left bottom 0;
+    width: 100%;
+}
+.fold-hd a:link {
+    color: #ccc;
+}
+.fold-hd a:visited {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #ccc;
+}
+.fold-hd a:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #3377aa;
+}
+.fold-hd a:active {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #3377aa;
+}
+.fold-bd {
+    display: none;
+}
+.qa {
+    float: right;
+}
+.ShortComments-Tip {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fffbf4 none repeat scroll 0 0;
+    border-color: #ffeed6 currentcolor;
+    border-image: none;
+    border-style: solid none;
+    border-width: 1px 0;
+    color: #494949;
+    margin: 5px 0 15px;
+    padding: 4px 0 3px;
+    text-align: center;
+}
+div.comment-item {
+    margin: 0;
+    overflow: hidden;
+    padding: 20px 0 25px;
+    position: relative;
+}
+div.comment-item::before {
+    background: #ddd none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transform: scaleY(0.5);
+    transform-origin: left bottom 0;
+    width: 100%;
+}
+div.comment-item .avatar {
+    float: left;
+    margin-right: 15px;
+    width: 48px;
+}
+div.comment-item h3 {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #494949;
+    font-size: 12px;
+    height: auto;
+    margin: 0 0 5px;
+    overflow: hidden;
+    padding: 0;
+}
+div.comment-item .comment {
+    color: #494949;
+    line-height: 1.5;
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+div.comment-item .comment p {
+    margin: 0;
+}
+div.comment-item .comment-vote {
+    float: right;
+}
+.comment-time {
+    color: #aaa;
+}
+#comments {
+    padding: 0;
+}
+#comments .comment-report {
+    bottom: 8px;
+    float: none;
+    line-height: 1;
+    margin: 0;
+    position: absolute;
+    right: 0;
+}
+#comments .comment-report a {
+    display: inline-block;
+}
+#comments .irrelevant {
+    bottom: 8px;
+    color: #bbb;
+    display: none;
+    line-height: 1;
+    position: absolute;
+    right: 34px;
+}
+#comments .irrelevant:hover {
+    background: #bbb none repeat scroll 0 0;
+    color: white;
+}
+#comments .irrelevant.done {
+    background: #fff none repeat scroll 0 0;
+    color: #007722;
+    cursor: text;
+}
+#comments .comment-item:hover .irrelevant {
+    display: inline-block;
+}
+#comments-section {
+    margin-bottom: 30px;
+}
+#comments-section .mod-hd {
+    margin-top: 16px;
+    overflow: hidden;
+}
+#comments-section .mod-hd h2 {
+    margin-top: 0;
+}
+#comments-section .comment-item {
+    padding: 14px 0;
+}
+#comments-section .comment-item:last-of-type::before {
+    height: 0;
+}
+#comments-section .irrelevant {
+    display: none;
+}
+.qa-tip {
+    display: none;
+    line-height: 22px;
+}
+.qa-tip a:link {
+    color: #3377aa;
+}
+.tab-hd {
+    padding-bottom: 15px;
+    position: relative;
+}
+.tab-hd::before {
+    background: #ddd none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transform: scaleY(0.5);
+    transform-origin: left bottom 0;
+    width: 100%;
+}
+.tab-hd .on:link, .tab-hd .on:visited, .tab-hd .on:hover, .tab-hd .on:active {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #111;
+}
+#new-comments, #following-comments {
+    display: none;
+}
+.release-notice {
+    color: #bbb;
+}
+.comment-vote-disabled {
+    color: #bbb;
+}
+.comment-vote-disabled a {
+    color: #bbb;
+}
+.comment-vote-disabled a:hover {
+    color: #fff;
+}
+#comment-forbid-notice {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #27a;
+    display: none;
+    height: 22px;
+    margin: 5px -108px;
+    padding: 5px;
+    position: absolute;
+    width: 158px;
+}
+.followings_collect {
+    background: #f9f9f9 none repeat scroll 0 0;
+    padding: 9px 10px;
+}
+.comments-footer-tips {
+    color: #999;
+    font-size: 12px;
+    margin: 30px 0;
+}
+#askmatrix {
+    margin-bottom: 30px;
+}
+#askmatrix .mod-hd {
+    overflow: hidden;
+}
+#askmatrix .mod-hd h2 {
+    float: left;
+}
+#askmatrix .mod-hd comment_btn {
+    float: right;
+}
+#askmatrix li {
+    border-bottom: 1px dashed #ddd;
+    margin-bottom: 8px;
+    overflow: hidden;
+    padding-bottom: 8px;
+}
+#askmatrix li .tit {
+    float: left;
+}
+#askmatrix li .meta {
+    color: #666;
+    float: right;
+}
+#askmatrix .ask-btn {
+    color: #c36347;
+}
+#askmatrix .ask-btn:hover {
+    background: #c36347 none repeat scroll 0 0;
+    color: #fff;
+}
+.tags {
+    margin-bottom: 30px;
+}
+.tags-body {
+    letter-spacing: -0.31em;
+    line-height: 24px;
+}
+.tags-body a {
+    background-color: #f5f5f5;
+    border-radius: 2px;
+    display: inline-block;
+    letter-spacing: normal;
+    margin: 0 8px 8px 0;
+    padding: 0 8px;
+}
+.tags-body a:link, .tags-body a:visited {
+    background-color: #f5f5f5;
+    color: #37a;
+}
+.tags-body a:hover, .tags-body a:active {
+    background-color: #e8e8e8;
+    color: #37a;
+}
+#subject-doulist {
+    margin-bottom: 40px;
+    overflow-wrap: break-word;
+}
+#subject-doulist ul {
+    border-top: 1px dashed #ddd;
+}
+#subject-doulist li {
+    border-bottom: 1px dashed #ddd;
+    padding: 4.5px 0;
+}
+#subject-doulist li span {
+    color: #666;
+    line-height: 1.5;
+}
+#subject-doulist .doulist-add-btn {
+    float: none;
+    margin-top: 5px;
+}
+#subject-others-interests {
+    margin-bottom: 40px;
+    overflow-wrap: break-word;
+}
+#subject-others-interests ul {
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+#subject-others-interests li {
+    border-bottom: 1px dashed #ddd;
+    color: #666;
+    line-height: 1.5;
+    overflow: hidden;
+    padding: 12px 0;
+}
+#subject-others-interests .others-interest-avatar {
+    float: left;
+    margin-right: 12px;
+}
+#subject-others-interests .others-interest-info {
+    overflow: hidden;
+}

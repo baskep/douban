@@ -1,0 +1,247 @@
+
+body, td, th {
+    font: 12px/1.62 Helvetica,Arial,sans-serif;
+}
+input, button, textarea, select, optgroup, option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    list-style: outside none none;
+}
+input {
+    font-size: 12px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+a {
+    cursor: pointer;
+}
+.nav {
+    margin-bottom: 40px;
+    min-width: 950px;
+    overflow: hidden;
+    width: 100%;
+}
+.nav .nav-wrap {
+    border-bottom: 1px solid #e5ebe4;
+}
+.nav .nav-primary {
+    margin: 0 auto;
+    overflow: visible;
+    padding: 10px 0 5px;
+    position: relative;
+    width: 950px;
+}
+.nav .nav-logo {
+    float: left;
+    height: 56px;
+    margin: 0 13px 0 0;
+    width: 145px;
+}
+.nav .nav-logo a {
+    display: block;
+    height: 100%;
+    line-height: 100em;
+    overflow: hidden;
+    width: 100%;
+}
+.nav .nav-logo a:hover, .nav .nav-logo a:active {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+legend {
+    color: #000;
+}
+label {
+    font-family: Tahoma;
+    vertical-align: middle;
+}
+fieldset {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+fieldset img {
+    border: 0 none;
+}
+fieldset legend {
+    color: #666;
+    padding: 0 5px;
+}
+.nav-search {
+    margin-left: 145px;
+    overflow: visible;
+    padding: 10px 0 15px;
+    position: relative;
+}
+.nav-search fieldset {
+    border: medium none;
+    margin: 0;
+    padding: 0;
+    position: static;
+}
+.nav-search legend {
+    display: none;
+}
+.nav-search label {
+    color: #bbb;
+    cursor: text;
+    left: 11px;
+    line-height: 30px;
+    position: absolute;
+    top: 10px;
+    width: auto;
+}
+.nav-search .inp {
+    cursor: text;
+    float: left;
+    height: 34px;
+    margin-right: -3px;
+    text-align: center;
+    width: 470px;
+}
+.nav-search .inp input {
+    background: #fff none repeat scroll 0 0;
+    height: 30px;
+    margin: 0;
+    outline: medium none;
+    padding-left: 10px;
+    text-align: left;
+    width: 96%;
+}
+.nav-search input {
+    background: transparent none repeat scroll 0 0;
+    border: medium none;
+}
+.nav-search .inp-btn {
+    height: 34px;
+    left: -1px;
+    overflow: hidden;
+    position: relative;
+    width: 37px;
+}
+.nav-search .inp-btn input {
+    color: transparent;
+    cursor: pointer;
+    font-size: 0;
+    height: 100%;
+    overflow: hidden;
+    padding: 35px 0 0;
+    width: 100%;
+}
+form {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+.nav-secondary {
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 0;
+    width: 950px;
+}
+.nav-secondary .nav-items {
+    float: none;
+    font-size: 13px;
+}
+.nav-secondary::after {
+    clear: both;
+    content: " ";
+    display: block;
+}
+.nav-secondary ul {
+    margin: 9px 0;
+}
+.nav-secondary li {
+    display: inline;
+    margin-right: 25px;
+}
+.nav-srh .inp {
+    position: relative;
+    z-index: 40;
+}
+#search_suggest {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: currentcolor #ddd #ddd;
+    border-image: none;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    position: absolute;
+    top: 32px;
+    width: 302px;
+    z-index: 99;
+}
+#search_suggest li {
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+}
+#search_suggest li:last-child {
+    border-bottom: 0 none;
+}
+#search_suggest li.curr_item {
+    background: #efefef none repeat scroll 0 0;
+}
+#search_suggest li a {
+    color: #999;
+    display: block;
+    overflow: hidden;
+    padding: 6px;
+}
+#search_suggest li a:link, #search_suggest li a:visited {
+    text-decoration: none;
+}
+#search_suggest li a:hover {
+    background: #f9f9f9 none repeat scroll 0 0;
+    color: #999;
+}
+#search_suggest li a em {
+    color: #369;
+    font-style: normal;
+}
+#search_suggest li p {
+    margin: 0;
+    overflow: hidden;
+}
+#search_suggest li img {
+    float: left;
+    margin-right: 8px;
+    margin-top: 3px;
+}
+#search_suggest li.over {
+    background: #fbfbfb none repeat scroll 0 0;
+}
+#search_suggest {
+    margin-left: -5px;
+    margin-top: 2px;
+    width: 468px;
+}
+#db-nav-movie {
+    background-color: #f0f3f5;
+}
+#db-nav-movie .nav-wrap {
+    border-color: #e3ebec;
+}
+#db-nav-movie .nav-logo {
+    background: rgba(0, 0, 0, 0) url("//img3.doubanio.com/dae/accounts/resources/c936707/movie/assets/lg_movie_a12_2.png") no-repeat scroll 0 12px;
+}
+#db-nav-movie a:link, #db-nav-movie a:visited {
+    color: #27a;
+    text-decoration: none;
+}
+.nav-search .inp {
+    background-image: url("//img3.doubanio.com/dae/accounts/resources/c936707/movie/assets/nav_mv_bg.png?s=1");
+}
+.nav-search .inp-btn input {
+    background: rgba(0, 0, 0, 0) url("//img3.doubanio.com/dae/accounts/resources/c936707/movie/assets/nav_mv_bg.png?s=1") no-repeat scroll 0 -40px;
+}

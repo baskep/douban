@@ -1,0 +1,64 @@
+
+.browser-detect-result {
+    color: #666;
+    margin: 0 auto;
+    max-width: 720px;
+}
+.browser-detect-result a, .browser-detect-result a:link {
+    background-color: inherit;
+    color: #37a;
+    text-decoration: none;
+}
+.browser-detect-result a:visited {
+    background-color: inherit;
+    color: #669;
+}
+.browser-detect-result a:active {
+    background-color: #f93;
+    color: #fff;
+}
+.browser-detect-result a:hover {
+    background-color: #37a;
+    color: #fff;
+}
+.browser-detect-result p {
+    background-color: #fdfaf1;
+    font-size: 14px;
+    margin: 0 0 20px;
+    padding: 20px;
+}
+.browser-detect-result ul {
+    font-size: 0;
+}
+.browser-detect-result ul li {
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: top;
+    width: 33.3%;
+}
+.browser-detect-result .browser-chrome, .browser-detect-result .browser-firefox, .browser-detect-result .browser-ie {
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    min-height: 45px;
+    padding: 0 0 0 60px;
+}
+.browser-detect-result .browser-chrome {
+    background-image: url("pics/browser_chrome.png");
+}
+.browser-detect-result .browser-firefox {
+    background-image: url("pics/browser_firefox.png");
+    background-position: 30px 50%;
+    border-left: 1px solid #e8e8e8;
+    padding: 0 0 0 90px;
+}
+.browser-detect-result .browser-ie {
+    background-image: url("pics/browser_ie.png");
+    background-position: 30px 50%;
+    border-left: 1px solid #e8e8e8;
+    padding: 0 0 0 90px;
+}
+.browser-detect-result .browser-link {
+    color: #ccc;
+    font-size: 12px;
+}

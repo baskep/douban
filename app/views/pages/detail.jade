@@ -1,0 +1,169 @@
+extends ../layout
+block otherStyle
+  link(href="/css/movie/public/_all.css", rel="stylesheet")
+  link(href="/css/movie/public/reg_login_pop.css", rel="stylesheet")
+  link(href="/css/movie/detail/answer_entry.css", rel="stylesheet")
+  link(href="/css/movie/detail/detail_1.css", rel="stylesheet")
+  link(href="/css/movie/detail/detail_2.css", rel="stylesheet")
+  link(href="/css/movie/detail/setting_standalone.css", rel="stylesheet")
+  link(href="/css/movie/detail/style.min.css", rel="stylesheet")
+  link(href="/css/movie/detail/test.css", rel="stylesheet")
+  style.
+    .defaul-color {
+        color: #37a;
+    }
+    .grid-16-8 .aside {
+        float: right;
+        width: 510px;
+    }
+block content
+    div#wrapper(style="width:1150px;margin-top:40px")
+      div#content
+        h1
+          span #{movie.title}
+          span.year (2016)
+        div.grid-16-8.clearfix
+          div.article
+            div.indent.clearfix
+              div.subjectwrap.clearfix
+                div.subject.clearfix
+                  div#mainpic
+                    a.nbgnbg(href="")
+                      img(src="#{movie.poster}" alt="#{movie.title}")
+                  div#info
+                    span
+                      span.pl 导演:
+                      span.defaul-color #{movie.doctor}
+                    br
+                    span
+                      span.pl 编剧:
+                      span.defaul-color #{movie.doctor}
+                    br
+                    span
+                      span.pl 主演: 
+                      span.defaul-color #{movie.casts}
+                    br
+                    span
+                      span.pl 类型:
+                      span.defaul-color #{movie.genres}
+                    br
+                    span
+                      span.pl 制作国家/地区 :
+                      span.defaul-color #{movie.country}
+                    br
+                    span
+                      span.pl 语言 :
+                      span.defaul-color #{movie.language}
+                    br
+                    span
+                      span.pl 上映年份 :
+                      span.defaul-color #{movie.year}
+                    br
+                    span
+                      span.pl 又名 :
+                      span.defaul-color #{movie.aka}
+                    br
+                div#interest_sectl
+                  div.rating_wrap.clearbox
+                    div.clearfix
+                      div.rating_logo.ll 豆瓣评分
+                    div.rating_self.clearfix
+                      strong.ll.rating_num #{movie.score}
+                      div.rating_right
+                        div.bigstar.ll
+                          span.starScore(style="display:none") #{movie.starScore}
+            div.related-info(style="margin-bottom:-10px;")
+              h2
+                i 你的名字。 剧情简介· · · · · · 
+              div.indent#link-report
+                span &nbsp;&nbsp;&nbsp;&nbsp;#{movie.summary}
+                br
+              .panel.panel-defatul
+                .panel-heading
+                  h3 评论区
+                .panel-body
+                  ul.media-list
+                  if comments
+                    each item in comments
+                      hr
+                      li.media
+                        .pull-left
+                          a.comment(href="#comments", data-cid="#{item._id}", data-tid="#{item.from._id}", data-cname="#{item.from.username}")
+                            img.media-object(src="http://q2.qlogo.cn/g?b=qq&k=IicmNK5WOlXh6at7hTE9nRQ&s=100&t=1500878956&max_age=31536000", style="width: 64px; height: 64px;")
+                        .media-body
+                          p.media-heading #{item.from.username}
+                          p #{item.content}
+                          if item.reply && item.reply.length > 0
+                            each reply in item.reply
+                              .media
+                                .pull-left
+                                  a.comment(href="#comments", data-cid="#{item._id}", data-tid="#{reply.from._id}" data-cname="#{item.from.username}")
+                                    img.media-object(src="http://tvax2.sinaimg.cn/crop.0.0.996.996.50/6ba2e66bly8fhx3gj8tvoj20ro0rojs2.jpg", style="width: 64px; height: 64px;")
+                                .media-body
+                                  p.media-heading
+                                    span.text-info &nbsp;回复: &nbsp;
+                                    | #{reply.from.username}
+                                    
+                                  p #{reply.content}
+              #comments
+                form#commentForm(method="POST", action="/comment")
+                  input(type="hidden", name="comment[movie]", value="#{movie._id}")
+                  if user
+                    input(type="hidden", name="comment[from]", value="#{user._id}")
+                  .form-group
+                    textarea.form-control.commentArea(name="comment[content]", style="height:120px;overflow:hidden;resize:none")
+                  if user
+                    button.btn.btn-primary(type='submit') 提交
+                  else
+                    a.navbar-link(href="/getLoginPage", ) 登录后评论
+          div.aside(stlye="position: static; left: 924.6px;")
+            div(style="height:350px;width:100%;")
+              embed(src="#{movie.flash}", allowFullScreen="true", quality="high", width="100%", height="100%", align="middle", type="application/x-shockwave-flash")
+      include ../footer
+block srcipts  
+  script.
+    $(function() {  
+      var starScores = $('#interest_sectl .bigstar');
+      var ratingstars = $('#interest_sectl .bigstar .starScore').text();
+      $(starScores).addClass('bigstar' + ratingstars);
+
+      $('.comment').click(function(e){
+        var target = $(this);
+        var cid = target.data('cid');
+        var tid = target.data('tid');
+        var cname = target.data('cname');
+        if($('#tid').length === 0) {
+          $('<input>').attr({
+            type : 'hidden',
+            id : 'tid',
+            name : 'comment[tid]',
+            value : tid
+          }).appendTo('#commentForm');
+        } else {
+          $('#tid').val(tid);
+        }
+
+        if($('#cid').length === 0) {
+          $('<input>').attr({
+            type : 'hidden',
+            id : 'cid',
+            name : 'comment[cid]',
+            value : cid
+          }).appendTo('#commentForm');
+        } else {
+          $('#cid').val(cid);
+        }
+        $('.commentArea').attr('placeholder','回复 ' + cname);
+      });
+    });
+
+    // 注销登录
+    function logout() {
+      $.get('/logout', function(result) {
+      if(result.flag === true || result.flag === 'true') {
+          window.location.reload();
+        }
+      });
+    }
+
+

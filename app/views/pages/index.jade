@@ -1,0 +1,134 @@
+extends ../layout
+block otherStyle
+  link(href="/css/movie/public/4781312100aff794.css", rel="stylesheet")
+  link(href="/css/movie/public/gallery.css", rel="stylesheet")
+  link(href="/css/movie/public/home.css", rel="stylesheet")
+  link(href="/css/movie/public/_all.css", rel="stylesheet")
+  link(href="/css/movie/public/reg_login_pop.css", rel="stylesheet")
+block content
+  div#wrapper
+    div#content
+      div.grid-16-8.clearfix
+        div.article
+          div#screening.s(style="width:590px;") 
+            div.screening-hd
+              div.ui-slide-control
+                span.prev-btn
+                  a.btn-prev(href="javascript:void(0)")
+                span.next-btn
+                  a.btn-next(href="javascript:void(0)")
+              div.slide-tip
+                if movies && movies.length > 0
+                  span.ui-slide-index 1
+                  span  / 
+                  span.ui-slide-max #{slideCount}
+              h2 正在热映
+            div.screening-bd
+              ul.ui-slide-content(style="left:0")
+                if movies && movies.length > 0
+                  each item in movies
+                    li.ui-slide-item(data-title="#{item.title}" data-release="#{item.year}" data-score="#{item.score}" data-country="#{item.country}" data-doctor="#{item.doctor}" data-casts="#{item.casts}")
+                      ul
+                        li.poster
+                          a(href="/movie/#{item._id}")
+                            img(src="#{item.poster}" alt="#{item.title}" rel="nofollow")
+                        li.title
+                          a(href="/movie/#{item._id}") #{item.title}
+                        li.rating
+                          span.starScore(style="display:none") #{item.starScore}
+                          span.rating-star.star
+                          span.subject-rate #{item.score}
+          div#movie_home_left_bottom.mb20.s
+            a(href="https://erebor.douban.com/redirect/?ad=187941&amp;uid=&amp;bid=9uIpafMOqgg&amp;unit=movie_home_left_bottom&amp;crtr=3%3A%2F&amp;mark=&amp;hn=sindar9c&amp;sig=064fc652f8d8ef3a501b848044064563ab3846aef5980f888b07884d0686e86531c8b4ad82f7243d64bab8f99bbf38d1be90d428dd69a97aa56edcfb4f23a850&amp;pid=debug_ac8602bf420364a2b9e62d131c19bd809e057e26&amp;target=https%3A%2F%2Fwww.douban.com%2Fnote%2F630570709%2F")
+              img(src="/images/ad_img.jpg" style="position:absolute;" width="590" height="112" border="0")
+          div.gaia.gaia-lite.gaia-movie.slide-mode(style="margin-top:180px;")
+            div.fliter-wp 
+              h2
+                div.activate(style="width:70px;height:20px;display:inline-block;float:left") 电影分类
+                div.filter(style="display:inline-block;")
+                  div.tags
+                    div.tag-list
+                      if categories
+                        each item in categories
+                          label #{item.name}
+                            input(type="radio" name="tag" value="#{item.name}")
+            div.list-wp
+                div.slider
+                  div.slide-container(style="height:518px")
+                    div.slide-wrapper(style="width: 4256px; left: 0px;")
+                  div.slide-ctrl.ui-slide-control#slide-ctrl
+
+        div.aside
+          div.rating_answer
+            ul
+              li
+                a(href="https://blog.douban.com/douban/2015/12/18/3060/" target="_blank") 豆瓣电影评分八问
+          div#dale_movie_home_top_right.s
+            div(style="position: relative; margin: 0px 0px 20px; display: block; width: 300px; height: 250px;")
+              div(style=" display: inline-block;font-size: 0;overflow: hidden;position: relative;")
+                a(href="https://dsp-click.youdao.com/clk/request.s?slot=f3798df8d024983112296167f94d86ab&k=oJzagE%2Fg8FMldCdW%2B09FOJ10Bw6r2xPspA0vI97abVnXxo%2BoRxcJpjjAgKuViCqvrwou2TfNvjWvGgTc0iLuVTZ6w5UB04yltwhnCuY9LVKNFWA4IPPMjnkuerSyFRJmysxS7gggY5KqHSMX5pm0Wr00bEExw8zjaVVaxGuPPrKkF3Ndy7LCHs0d%2FPHLO8OQs5C2r5p76LJvGV1pr0%2Fr4i5DkWltt40G4YRDOg2S20%2BOTMC86bt86i30udJzdx3ymt3ILVg%2B5MCC%2FxZkWli93J9KpOL8cXYL9FPCH%2BxSdLMJ2nbscgN9lBWtqY8T2X%2FfYvmM6yrC2gPMQlkIgisrc21xBG59UmhfTJCBUXZQRkXwwDMMLJbPPcd7J%2BAXQTzu5J2s4tPzbnVq4EgIsx%2B3bcamRdIrjBVRU5Q1BKJIxtMxDWp%2FfsKzrjuzPzOIEkTr8l%2BN9vTKqVkjVHyX8erVsAMOojMbZ4vU2T39hDWymIxlJtPKf0CvrJUznJX543fHHbbhAHDM6TvmqltUmuT6IvTQmSWzSwXmHU65vXfRL5trcWyHFGR9oqY1YGQaqvFiM7SFwNVVPxoCSVPxwe6PQiB3Jz%2BxXz36JDjQHYsfZHZILIi4BGJiuKf2O2suBm0fx3JyLeYjH6rXd3Zgho4Y49ABpSI8fc91nZsZyATM2HPfwAFpcWuB8bQ3k767xv7wOdu2oY7H4foBqpw9aSHyEeuKRBWcbdzRycM55I6MxOhhkuAmWlmWfMjfH4NkuKsDJOR5t8aXQKklWTtBewgdWpKx%2F49De2GjO4GgWZNaXhqfl0ZmtuPHQ%2BZag7aL3KeQFTsWqe3mVSeyJln2%2BBzDWT2F6rjFboFTmKyuYj%2FBB9wojYELUQ%2FcvRGglu3PwJJGYNj4ioG8LzdSEl1meKry2tfGj6hHFwmmOMCAq5WIKq%2FXxo%2BoRxcJpjjAgKuViCqv18aPqEcXCaY4wICrlYgqr%2BuEskluP%2Ba60zAlQsmc9i4%3D&youdao_bid=37b5f9e9-bd48-41a4-b678-dd18607bf632&youdao_deviceId=38bc05e3fe1760422d134436ae35e74b" target="_blank")
+                  img(src="https://oimagea4.ydstatic.com/image?id=1229190796194666709&product=adpublish&w=300&h=250")
+              div(style="line-height: 1; text-align: center; background-color: rgba(0, 0, 0, 0.3); font-size: 12px; position: absolute; right: 0px; bottom: 0px; padding: 4px; color: rgb(255, 255, 255);") 广告
+
+          div.hot_link
+            h2 电影活动 &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;· 
+            ul
+              li
+                a(href="https://m.douban.com/page/4kx6fz3" target="_blank") 瓣嘴丨雷佳音：我不是渣男我是安静的美男子
+              li
+                a(href=href="https://www.douban.com/event/29203126/"  target="_blank") 《心理罪》提前观影+映后与廖凡、导演交流
+              li
+                a(href="https://www.douban.com/gallery/topic/%E6%88%91%E8%A7%81%E8%BF%87%E7%9A%84%E5%9C%B0%E7%90%83%E7%A5%9E%E5%A5%87%E4%B8%80%E5%88%BB/" data-bid="2429" target="_blank") 聊/晒 #我见过的地球神奇一刻#
+          div#billboard
+            div.billboard-hd
+              h2 最新上映
+                span
+                  a(href="/getMoreMovie") 更多>>
+            div.billboard-hd 
+              if latestMovies
+                each movie in latestMovies
+                  table
+                    tbody
+                      tr
+                        td.order
+                        td.title
+                          a(href="/movie/#{movie._id}") #{movie.title}
+            div#contact-and-cooperation
+              div.contact-and-cooperation-hd
+                h2 合作联系
+              div.contact-and-cooperation-bd
+                ul
+                  li 电影合作邮箱：
+                    img(src="https://img3.doubanio.com/f/movie/c858df348b4d199c848774ed1b3ed529052f0fa1/pics/movie/email_movie.png")
+                  li 电视剧合作邮箱 :
+                    img(src="https://img3.doubanio.com/f/movie/4de38ce91fdad7bcf3246c2594c84fa800eba08a/pics/movie/email_tv.png")
+                    img(src="https://img3.doubanio.com/f/shire/486503da8c82ffdbecec41c065927f96cbf02e4f/pics/icon/ic_new.png" class="new")
+            div.contact.mod
+              h2 关注我们
+              ul.embassy-list.clearfix
+                li
+                  a(href="http://weibo.com/doubanfilm" target="_blank" class="icon-embassy-weibo")
+                  a(href="http://weibo.com/doubanfilm" target="_blank" class="primary-link") 微博
+                li
+                  a.icon-embassy-weixin
+                    div.hover
+                      img(src="https://img3.doubanio.com/f/movie/2e2ea342f4f4590300de32c5f30a9184176b3541/pics/movie/home_wechat_qrcode@2x.jpg" width="130px" height="130px")
+                  a.primary-link(href="javascript:") 微信
+                li
+                  a.icon-embassy-bite-me(href="http://weibo.com/doubanzui" target="_blank")
+                  a.primary-lin(href="http://weibo.com/doubanzui" target="_blank") 瓣嘴
+                li
+                  a.icon-embassy-award-site(href="https://site.douban.com/doubanfilmawards/" target="_blank")
+                  a.primary-link(href="https://site.douban.com/doubanfilmawards/" ) 鑫像奖小站
+                li
+                  a.icon-embassy-club-site(href="https://www.douban.com/people/nobodyfilm/" target="_blank" class="icon-embassy-weibo")
+                  a.primary-link(href="https://www.douban.com/people/nobodyfilm/" target="_blank" class="primary-link") 观影club
+            div#dale_movie_home_download_bottom
+              div.customize-slot.download-app
+                a(href="https://erebor.douban.com/redirect/?ad=186188&amp;uid=&amp;bid=9uIpafMOqgg&amp;unit=dale_movie_home_download_bottom&amp;crtr=3%3A%2F&amp;mark=&amp;hn=daisy9c&amp;sig=948337ba23ecfc23138d244c2c2e1c9b4fc92c22d6e5635b8eb7cb5875d506da7033462f0c52dc4fcc5f25fe882fa9969c8202f5abe93c471728d426b19e1748&amp;pid=debug_a682dc7a933462a4d55ebc317af7e875ff335d93&amp;target=https%3A%2F%2Fwww.douban.com%2Fdoubanapp%2Fapp%3Fchannel%3DDb_Homepage_Bar%26direct_dl%3D1" target="_blank")
+                  img.icon(src="/images/douban_icon.png" alt="")
+                  span.text 下载豆瓣App
+      include ../footer
+block srcipts          
+  script(src='./js/index.js')
+ 

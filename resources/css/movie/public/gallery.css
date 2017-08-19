@@ -1,0 +1,93 @@
+
+#gallery-frames {
+    margin-bottom: 36px;
+}
+.gallery p, span {
+    font-size: 12px;
+}
+.gallery-frame {
+    height: 240px;
+    white-space: normal;
+    width: 590px;
+}
+.gallery-frame img {
+    border: medium none;
+    float: left;
+    height: 240px;
+    width: 350px;
+}
+.gallery-frame .gallery-detail {
+    background: #f9f9f9 none repeat scroll 0 0;
+    display: inline-block;
+    height: 168px;
+    letter-spacing: normal;
+    padding: 48px 24px 24px;
+    position: relative;
+    vertical-align: top;
+    width: 192px;
+    word-spacing: normal;
+}
+.gallery-frame .gallery-footnote {
+    bottom: 10px;
+    color: #ccc;
+    font-size: 12px;
+    position: absolute;
+    right: 12px;
+}
+.gallery-hd {
+    margin-bottom: 18px;
+}
+.gallery-hd h3 {
+    background: transparent none repeat scroll 0 0;
+    color: #111;
+    font-size: 18px;
+    line-height: 28px;
+}
+.gallery-bd p {
+    color: #999;
+    font-size: 13px;
+    line-height: 20px;
+}
+#hot-gallery {
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+    width: 590px;
+}
+.ui-slide-content {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+}
+.ui-slide-item {
+    display: inline-block;
+    letter-spacing: normal;
+    vertical-align: top;
+    word-spacing: normal;
+}
+.gallery-ui-slide-control {
+    float: right;
+    margin: 5px 0 0 15px;
+}
+.gallery-ui-slide-control a {
+    background: rgba(0, 0, 0, 0) url("/f/movie/708be21a7bb2d0f21419dc4e2e2fde8b21ad661a/pics/movie/slide_swithc_2.png") no-repeat scroll 0 0;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 18px;
+    margin-right: 5px;
+    width: 18px;
+}
+.gallery-ui-slide-control .gallery-btn-prev {
+    background-position: 0 0;
+}
+.gallery-ui-slide-control .gallery-prev-btn .btn-disabled {
+    background-position: 0 -18px;
+}
+.gallery-ui-slide-control .gallery-btn-next {
+    background-position: -18px 0;
+}
+.gallery-ui-slide-control .gallery-next-btn .btn-disabled {
+    background-position: -18px -18px;
+}

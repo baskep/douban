@@ -1,0 +1,69 @@
+extends ../layout
+block otherStyle
+  link(href="/css/movie/public/_all.css", rel="stylesheet")
+  link(href="/css/movie/public/reg_login_pop.css", rel="stylesheet")
+  link(href="/css/movie/moreMovie/_init_.css" rel="stylesheet")
+  style.
+    .cover-wp img {
+      width: 128px;
+    }
+block content
+    div#wrapper
+      div#content
+        div
+        h1 选电影
+        div.grid-16-8.clearfix
+          div.article
+            div.gaia
+              div.fliter-wp
+                div.filter
+                  div.tags
+                    div.tag-list
+                      if categories
+                          each item in categories
+                            label.category #{item.name}
+                  div.tool
+                    div.sort
+                      label
+                        input(name="sort" value="pv" checked="checked" type="radio")
+                        span 按热度排序
+                      label
+                        input(name="sort" value="year" type="radio") 
+                        span 按时间排序
+                      label
+                        input(name="sort" value="genres" type="radio") 
+                        span 按评价排序
+              div.list-wp
+                div.list
+                a.more(href="javascript:;" data-skip="8") 加载更多
+          div.aside
+            div#dale_movie_home_top_right.s
+              div(style="position: relative; margin: 0px 0px 20px; display: block; width: 300px; height: 250px;")
+                div(style=" display: inline-block;font-size: 0;overflow: hidden;position: relative;")
+                  a(href="https://dsp-click.youdao.com/clk/request.s?slot=f3798df8d024983112296167f94d86ab&k=oJzagE%2Fg8FMldCdW%2B09FOJ10Bw6r2xPspA0vI97abVnXxo%2BoRxcJpjjAgKuViCqvrwou2TfNvjWvGgTc0iLuVTZ6w5UB04yltwhnCuY9LVKNFWA4IPPMjnkuerSyFRJmysxS7gggY5KqHSMX5pm0Wr00bEExw8zjaVVaxGuPPrKkF3Ndy7LCHs0d%2FPHLO8OQs5C2r5p76LJvGV1pr0%2Fr4i5DkWltt40G4YRDOg2S20%2BOTMC86bt86i30udJzdx3ymt3ILVg%2B5MCC%2FxZkWli93J9KpOL8cXYL9FPCH%2BxSdLMJ2nbscgN9lBWtqY8T2X%2FfYvmM6yrC2gPMQlkIgisrc21xBG59UmhfTJCBUXZQRkXwwDMMLJbPPcd7J%2BAXQTzu5J2s4tPzbnVq4EgIsx%2B3bcamRdIrjBVRU5Q1BKJIxtMxDWp%2FfsKzrjuzPzOIEkTr8l%2BN9vTKqVkjVHyX8erVsAMOojMbZ4vU2T39hDWymIxlJtPKf0CvrJUznJX543fHHbbhAHDM6TvmqltUmuT6IvTQmSWzSwXmHU65vXfRL5trcWyHFGR9oqY1YGQaqvFiM7SFwNVVPxoCSVPxwe6PQiB3Jz%2BxXz36JDjQHYsfZHZILIi4BGJiuKf2O2suBm0fx3JyLeYjH6rXd3Zgho4Y49ABpSI8fc91nZsZyATM2HPfwAFpcWuB8bQ3k767xv7wOdu2oY7H4foBqpw9aSHyEeuKRBWcbdzRycM55I6MxOhhkuAmWlmWfMjfH4NkuKsDJOR5t8aXQKklWTtBewgdWpKx%2F49De2GjO4GgWZNaXhqfl0ZmtuPHQ%2BZag7aL3KeQFTsWqe3mVSeyJln2%2BBzDWT2F6rjFboFTmKyuYj%2FBB9wojYELUQ%2FcvRGglu3PwJJGYNj4ioG8LzdSEl1meKry2tfGj6hHFwmmOMCAq5WIKq%2FXxo%2BoRxcJpjjAgKuViCqv18aPqEcXCaY4wICrlYgqr%2BuEskluP%2Ba60zAlQsmc9i4%3D&youdao_bid=37b5f9e9-bd48-41a4-b678-dd18607bf632&youdao_deviceId=38bc05e3fe1760422d134436ae35e74b" target="_blank")
+                    img(src="https://oimagea4.ydstatic.com/image?id=1229190796194666709&product=adpublish&w=300&h=250")
+                div(style="line-height: 1; text-align: center; background-color: rgba(0, 0, 0, 0.3); font-size: 12px; position: absolute; right: 0px; bottom: 0px; padding: 4px; color: rgb(255, 255, 255);") 广告
+            div#doulist
+              h2 热门豆列
+                ul
+                  li
+                    span 11450推荐
+                    div.title
+                      a(target="_blank" href="https://www.douban.com/doulist/107486/") 【豆瓣五星电影集中营】(1/3)
+                    li
+                      span 352推荐
+                      div.title
+                        a(target="_blank" href="https://www.douban.com/doulist/212993/") 欧美动画推荐
+                    li
+                      span 4783推荐
+                      div.title
+                        a(target="_blank" href="https://www.douban.com/doulist/119320/") BBC古典名著小剧集(BBC CLASSIC DRAMA)
+                    li
+                      span 6560推荐
+                      div.title
+                        a(target="_blank" href="https://www.douban.com/doulist/73124/") 心理学电影(一句话剧透,不喜勿入)
+        include ../footer
+block srcipts          
+  script(src='./js/moreMovie.js')      
+  
+

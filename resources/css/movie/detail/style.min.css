@@ -1,0 +1,256 @@
+
+.tag-input-fieldset {
+    font-size: 0;
+}
+.tag-input-x {
+    font-size: 14px;
+}
+.tag-input-tag {
+    display: inline-block;
+    margin-right: 5px;
+    position: relative;
+}
+.tag-input-tag a {
+    font-size: 15px;
+    line-height: 14px;
+    position: absolute;
+    right: 5px;
+    text-align: center;
+    top: 4px;
+    width: 14px;
+}
+.tag-input-tag a:link, .tag-input-tag a:visited {
+    color: #aaa;
+}
+.tag-input-tag a:hover {
+    background: transparent none repeat scroll 0 0;
+    color: #37a;
+}
+.tag-input-tag input {
+    background-color: #ebebeb;
+    border: 0 none;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 24px;
+    outline: medium none;
+    padding: 0 10px 0 0;
+    text-align: center;
+}
+.tag-input-tag input:focus {
+    background-color: #fff;
+    color: #999;
+}
+.tag-input-tag input:focus + a {
+    display: none;
+}
+.tag-input-tag:hover input {
+    background-color: #f0f0f0;
+    color: #999;
+}
+.tag-input-tag:hover a:link {
+    color: #999;
+}
+.tag-input-field {
+    border: 0 none;
+    font-size: 14px;
+    line-height: 24px;
+    outline: medium none;
+    padding: 0;
+}
+.tag-input-container {
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    cursor: text;
+    position: relative;
+}
+.tag-list-group li {
+    display: inline-block;
+    margin-bottom: 4px;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+.tag-list-label {
+    float: left;
+    margin-right: 10px;
+}
+.tag-list-container {
+    margin-bottom: 20px;
+}
+.tag-list-content {
+    overflow: hidden;
+}
+.tag-list-tag-on a:active, .tag-list-tag-on a:hover, .tag-list-tag-on a:link, .tag-list-tag-on a:visited {
+    background-color: transparent;
+    color: #aaa;
+}
+.tag-list-button-fold::after {
+    content: "▾";
+    display: inline-block;
+    margin-left: 4px;
+}
+.tag-list-button-fold-open::after {
+    transform: rotate(-180deg);
+}
+.Dialog {
+    background: #fff none repeat scroll 0 0;
+    border: 8px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.Dialog.is-hidden {
+    display: none;
+}
+.Dialog-hd {
+    padding: 10px 10px 6px;
+    position: relative;
+}
+.Dialog-hd h1 {
+    color: #060;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+.Dialog-hd span {
+    color: #b4b4b4;
+    cursor: pointer;
+    font-size: 13px;
+    position: absolute;
+    right: 12px;
+    top: 6px;
+}
+.Dialog-hd span:hover {
+    color: #fab0b6;
+}
+.Dialog-bd {
+    padding: 15px;
+}
+.LikeTagsDialog {
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+}
+.LikeTagsDialog a {
+    text-decoration: none;
+}
+.LikeTagsDialog .tag-input-container {
+    border: 1px solid #ccc;
+    padding: 4px;
+}
+.LikeTagsDialog .tag-input-container * {
+    font-size: 12px;
+}
+.LikeTagsDialog .tag-input-field:first-child {
+    margin-left: 4px;
+}
+.LikeTagsDialog .tag-list-container {
+    font-size: 12px;
+    margin: 5px 0 0;
+}
+.LikeTagsDialog .tag-list-label {
+    color: #bbb;
+}
+.LikeTagsDialog .tag-list-group {
+    margin: 0;
+    padding: 0;
+}
+.LikeTagsDialog .tag-list-tag a {
+    color: #37a;
+}
+.LikeTagsDialog::after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #000 #fff currentcolor;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 10px 10px 0;
+    bottom: -18px;
+    content: " ";
+    height: 0;
+    opacity: 0.2;
+    position: absolute;
+    right: 25px;
+    width: 0;
+}
+.LikeTagsDialog-action {
+    font-size: 12px;
+    padding-top: 15px;
+    text-align: right;
+}
+.LikeTagsDialog-action button {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-user-select: none;
+    background: rgba(0, 0, 0, 0) linear-gradient(180deg, #fcfcfc, #e9e9e9) repeat scroll 0 0;
+    border-color: #bbb #bbb #999;
+    border-image: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    color: #444;
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    height: 27px;
+    margin: 0;
+    outline: 0 none;
+    padding: 0 14px;
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+}
+.LikeTagsDialog-action button:hover {
+    background: rgba(0, 0, 0, 0) linear-gradient(180deg, #f8f8f8, #ddd) repeat scroll 0 0;
+}
+.LikeButton {
+    -moz-user-select: none;
+    background: #fbe9d9 none repeat scroll 0 0;
+    border: 1px solid #fad5b5;
+    border-radius: 2px;
+    box-sizing: content-box;
+    color: #ca6445;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-kerning: inherit;
+    font-language-override: inherit;
+    font-size: 12px;
+    font-size-adjust: inherit;
+    font-stretch: inherit;
+    font-style: inherit;
+    font-synthesis: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    height: 12px;
+    line-height: 1;
+    margin: 0;
+    outline: 0 none;
+    padding: 6px 9px 4px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+}
+.LikeButton.has-liked {
+    background: #ffdcbc none repeat scroll 0 0;
+    border: 1px solid #fad5b5;
+    color: #c95431;
+}
+.LikeButton-count {
+    margin-left: 3px;
+}
+.LikeButton-root {
+    line-height: 1;
+    position: relative;
+}
+.LikeTagsDialog {
+    bottom: 44px;
+    position: absolute;
+    right: -10px;
+    width: 500px;
+}

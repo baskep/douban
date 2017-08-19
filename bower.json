@@ -1,0 +1,22 @@
+{
+  "name": "bowerConfig",
+  "authors": [
+    "zt <907237461@qq.com>"
+  ],
+  "description": "bower configure",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

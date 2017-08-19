@@ -1,0 +1,573 @@
+
+.DRE-popup-form-button {
+    -moz-user-select: none;
+    background: transparent none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #666;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.2;
+    outline: medium none;
+    padding: 5px 20px;
+    text-align: center;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.DRE-popup-form-button:link, .DRE-popup-form-button:visited {
+    color: #666;
+}
+.DRE-popup-form-button:focus {
+    border-color: #bbb;
+}
+.DRE-popup-form-button:hover {
+    background-color: #eee;
+}
+.DRE-popup-form-button:active {
+    background-color: #ccc;
+}
+.DRE-popup-form-button-main, .review-editor-popup-setting-submit button {
+    -moz-user-select: none;
+    background-color: #3aa253;
+    border: 1px solid #51873e;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.2;
+    outline: medium none;
+    padding: 5px 20px;
+    text-align: center;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.DRE-popup-form-button-main:link, .review-editor-popup-setting-submit button:link, .DRE-popup-form-button-main:visited, .review-editor-popup-setting-submit button:visited, .DRE-popup-form-button-main:hover, .review-editor-popup-setting-submit button:hover, .DRE-popup-form-button-main:active, .review-editor-popup-setting-submit button:active {
+    color: #fff;
+    font-size: 12px;
+    font-weight: normal;
+}
+.DRE-popup-form-button-main:hover, .review-editor-popup-setting-submit button:hover {
+    background-color: #4fc06a;
+    border-color: #66aa4e;
+}
+.DRE-popup-form-button-main:active, .review-editor-popup-setting-submit button:active {
+    background-color: #2d7c40;
+    border-color: #3c642e;
+}
+.review-setting-dialog-container {
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+.review-setting-dialog-container .review-setting-dialog-panel-wrapper {
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    padding: 40px 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+.review-setting-dialog-container .review-setting-dialog-panel-wrapper::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    margin-left: -1px;
+    vertical-align: middle;
+    width: 1px;
+}
+.review-setting-dialog-container .review-setting-dialog-panel {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    max-width: 640px;
+    min-width: 240px;
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+}
+.review-setting-dialog-container .review-setting-dialog-hd {
+    color: #072;
+    font-size: 15px;
+    margin: 0;
+    padding: 25px 40px 0;
+}
+.review-setting-dialog-container .review-setting-dialog-bd {
+    padding: 15px 40px 30px;
+}
+.review-setting-dialog-container .review-setting-dialog-close {
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 1;
+    padding: 20px;
+    position: absolute;
+    right: 18px;
+    top: 6px;
+}
+.review-setting-dialog-container .review-setting-dialog-close:link, .review-setting-dialog-container .review-setting-dialog-close:visited {
+    color: #ccc;
+}
+.review-setting-dialog-container .review-setting-dialog-close:hover {
+    background-color: transparent;
+    color: #072;
+}
+.review-setting-dialog-container .review-setting-dialog-close:active {
+    color: #005e1b;
+}
+.review-setting-dialog-container {
+    z-index: 20;
+}
+.review-setting-dialog-container .review-setting-dialog-panel {
+    overflow: hidden;
+}
+.review-setting-dialog-container .review-setting-dialog-bd {
+    padding: 20px 0 0;
+}
+.review-setting-dialog-container .review-setting-dialog-close {
+    padding: 15px 20px;
+}
+.review-setting-dialog-container .review-editor-popup-setting-fieldset {
+    padding: 0 40px;
+}
+.review-setting-dialog-container .review-editor-popup-setting-submit {
+    background-color: #f8f8f8;
+}
+.review-setting-dialog-container .review-editor-popup-setting-submit a:link, .review-setting-dialog-container .review-editor-popup-setting-submit a:visited {
+    color: #333;
+}
+.review-setting-dialog-container .review-editor-popup-setting-submit a:hover, .review-setting-dialog-container .review-editor-popup-setting-submit a:active {
+    color: #fff;
+}
+.review-setting-dialog-container .review-editor-popup-setting-submit button {
+    padding: 9px 35px;
+}
+.DRE-popup-form {
+    position: relative;
+}
+.DRE-popup-form-item {
+    margin: 0 40px 20px;
+    position: relative;
+}
+.DRE-popup-form-item *::-moz-placeholder {
+    font-size: 12px;
+}
+.DRE-popup-form-item *:-moz-placeholder {
+    font-size: 12px;
+}
+.DRE-popup-form-item label {
+    margin-right: 5px;
+}
+.DRE-popup-form-item input[type="text"] {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 12px 10px;
+    width: 100%;
+}
+.DRE-popup-form-item input[type="text"]:focus {
+    border-color: #ccc;
+    outline: medium none;
+}
+.DRE-popup-form-item p {
+    color: #999;
+    font-size: 12px;
+    margin: 0;
+    padding: 5px 0 0;
+}
+.DRE-popup-form-item-selected-text {
+    color: #494949;
+    font-size: 12px;
+}
+.DRE-popup-form-submit {
+    padding: 0 40px 30px;
+    text-align: left;
+}
+.DRE-popup-form-submit button {
+    margin: 0 20px 0 0;
+}
+.DRE-popup-form-error {
+    color: #ff213c;
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.DRE-popup-form-preview-link {
+    background: #fff none repeat scroll 0 0;
+    bottom: 1px;
+    font-size: 12px;
+    line-height: 40px;
+    padding: 0 10px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    z-index: 1;
+}
+.DRE-popup-form-preview-link a {
+    background-image: url("/f/zerkalo/d65ea1c484451d87c0507fd9123849b72f3bda6b/pics/review_editor/svg_open_link.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    font-size: 0;
+    height: 14px;
+    line-height: 40px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 14px;
+}
+.DRE-popup-form-preview-link a:hover {
+    background-color: transparent;
+    background-image: url("/f/zerkalo/f760277fd64454a9bd16b8fdc82debc8a1d26730/pics/review_editor/svg_open_link_hover.svg");
+}
+.DRE-form-field-highlight {
+    animation: 0.5s ease-in-out 0s normal none 1 running anim_highlight;
+    position: relative;
+    z-index: 2;
+}
+@keyframes anim_highlight {
+50% {
+    background-color: #ffdede;
+}
+100% {
+    background-color: #fff;
+}
+}
+@keyframes anim_highlight {
+50% {
+    background-color: #ffdede;
+}
+100% {
+    background-color: #fff;
+}
+}
+.review-editor-popup-setting-tag {
+    margin-bottom: 30px;
+}
+.review-editor-popup-setting-tag .tag-input-fieldset {
+    font-size: 0;
+}
+.review-editor-popup-setting-tag .tag-input-x {
+    font-size: 14px;
+}
+.review-editor-popup-setting-tag .tag-input-tag {
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+    vertical-align: middle;
+}
+.review-editor-popup-setting-tag .tag-input-tag a {
+    font-size: 15px;
+    font-weight: lighter;
+    line-height: 14px;
+    position: absolute;
+    right: 5px;
+    text-align: center;
+    top: 4px;
+    width: 14px;
+}
+.review-editor-popup-setting-tag .tag-input-tag a:link, .review-editor-popup-setting-tag .tag-input-tag a:visited {
+    color: #aaa;
+}
+.review-editor-popup-setting-tag .tag-input-tag a:hover {
+    background: transparent none repeat scroll 0 0;
+    color: #37a;
+}
+.review-editor-popup-setting-tag .tag-input-tag input {
+    -moz-appearance: none;
+    background-color: #ebebeb;
+    border: 0 none;
+    color: #aaa;
+    font-size: 12px;
+    line-height: 24px;
+    outline: medium none;
+    padding: 0 16px 0 0;
+    text-align: center;
+}
+.review-editor-popup-setting-tag .tag-input-tag input:focus {
+    background-color: #fff;
+    color: #999;
+}
+.review-editor-popup-setting-tag .tag-input-tag input:focus + a {
+    display: none;
+}
+.review-editor-popup-setting-tag .tag-input-tag:hover input {
+    background-color: #f0f0f0;
+    color: #999;
+}
+.review-editor-popup-setting-tag .tag-input-tag:hover a:link {
+    color: #999;
+}
+.review-editor-popup-setting-tag .tag-input-field {
+    -moz-appearance: none;
+    border: 0 none;
+    font-size: 14px;
+    outline: medium none;
+    padding: 5px 0;
+    vertical-align: middle;
+}
+.review-editor-popup-setting-tag .tag-input-container {
+    background-image: url("/f/zerkalo/39d416bbfccef8351c9bfdad9b6962c954b697dd/pics/review_editor/svg_tag_disable.svg");
+    background-position: 7px 50%;
+    background-repeat: no-repeat;
+    border: 1px solid #eee;
+    cursor: text;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    padding-left: 35px;
+    padding-top: 8px;
+    position: relative;
+}
+.review-editor-popup-setting-tag .tag-input-focus {
+    background-image: url("/f/zerkalo/023e524590e8fdcb1f7628115ac3673eb6a610ac/pics/review_editor/svg_tag.svg");
+    border-color: #ccc;
+}
+.review-editor-popup-setting-tag .tag-list-group {
+    margin-right: 30px;
+    position: relative;
+}
+.review-editor-popup-setting-tag .tag-list-group li {
+    display: inline-block;
+    margin-bottom: 4px;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+.review-editor-popup-setting-tag .tag-list-label {
+    color: #999;
+    float: left;
+    margin-right: 10px;
+}
+.review-editor-popup-setting-tag .tag-list-content {
+    overflow: hidden;
+}
+.review-editor-popup-setting-tag .tag-list-tag-on a:link, .review-editor-popup-setting-tag .tag-list-tag-on a:visited, .review-editor-popup-setting-tag .tag-list-tag-on a:hover, .review-editor-popup-setting-tag .tag-list-tag-on a:active {
+    background-color: transparent;
+    color: #aaa;
+}
+.review-editor-popup-setting-tag .tag-list-button-fold {
+    position: absolute;
+    right: -30px;
+    top: 0;
+}
+.review-editor-popup-setting-tag .tag-list-button-fold:link, .review-editor-popup-setting-tag .tag-list-button-fold:visited, .review-editor-popup-setting-tag .tag-list-button-fold:hover, .review-editor-popup-setting-tag .tag-list-button-fold:active {
+    background-color: transparent;
+    color: #999;
+}
+.review-editor-popup-setting-tag .tag-list-button-fold::after {
+    background-image: url("/f/zerkalo/f20f2ff3c2886ff3a3ed3fa64ee513f630dd05a9/pics/review_editor/svg_arrow_down.svg");
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 14px;
+    margin-left: 2px;
+    vertical-align: middle;
+    width: 14px;
+}
+.review-editor-popup-setting-tag .tag-list-button-fold-open::after {
+    transform: rotate(-180deg);
+}
+.review-editor-popup-setting-tag *::-moz-placeholder {
+    font-size: 12px;
+}
+.review-editor-popup-setting-tag *:-moz-placeholder {
+    font-size: 12px;
+}
+.review-editor-popup-setting-label {
+    color: #999;
+    float: left;
+}
+.review-editor-popup-setting-fieldset {
+    margin-bottom: 10px;
+}
+.review-editor-popup-setting-fieldset, .review-editor-popup-setting-fields {
+    overflow: hidden;
+}
+.review-editor-popup-setting-fields {
+    padding-left: 20px;
+}
+.review-editor-popup-setting-fields label {
+    margin-left: 4px;
+}
+.review-editor-popup-setting-field {
+    display: inline-block;
+    margin-right: 5px;
+}
+.review-editor-popup-setting-form {
+    display: block;
+    width: 560px;
+}
+.review-editor-popup-setting-submit {
+    padding: 20px;
+    text-align: center;
+}
+.review-editor-popup-setting-submit button {
+    margin-left: 30px;
+}
+.review-editor-popup-setting-error {
+    color: #ff213c;
+    font-size: 12px;
+}
+.review-editor-popup-setting-permission-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.review-editor-popup-setting-permission-bar {
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+.review-editor-popup-setting-permission-bar::before {
+    border-top: 1px solid #e5e5e5;
+    content: "";
+    left: 0;
+    margin-top: -1px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+.review-editor-popup-setting-permission-bar a {
+    background: #fff none repeat scroll 0 0;
+    display: inline-block;
+    padding: 0 20px;
+    position: relative;
+}
+.review-editor-popup-setting-permission-bar a:link, .review-editor-popup-setting-permission-bar a:visited, .review-editor-popup-setting-permission-bar a:hover, .review-editor-popup-setting-permission-bar a:active {
+    background-color: #fff;
+    color: #999;
+}
+.review-editor-popup-setting-permission-close a::after {
+    background-image: url("/f/zerkalo/f20f2ff3c2886ff3a3ed3fa64ee513f630dd05a9/pics/review_editor/svg_arrow_down.svg");
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 6px;
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 14px;
+}
+.review-editor-popup-setting-permission-open a::after {
+    background-image: url("/f/zerkalo/364d4e5dfb03be7243861bd81a90562ca6041e31/pics/review_editor/svg_arrow_up.svg");
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 6px;
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 14px;
+}
+.review-editor-popup-setting-permission-container .review-editor-popup-setting-fieldset {
+    display: table-cell;
+    padding: 0 30px 0 0;
+    vertical-align: top;
+}
+.review-editor-popup-setting-permission-container .review-editor-popup-setting-fieldset .review-editor-popup-setting-label {
+    display: table-cell;
+    float: none;
+    line-height: 30px;
+}
+.review-editor-popup-setting-permission-container .review-editor-popup-setting-fieldset .review-editor-popup-setting-fields {
+    display: table-cell;
+}
+.review-editor-popup-setting-permission-container .review-editor-popup-setting-fieldset select {
+    -moz-appearance: none;
+    background: #fff url("/f/zerkalo/6183881ddf59912dd7e329dde6bb15526a9c3f67/pics/review_editor/svg_arrow_down1.svg") no-repeat scroll 90% 50%;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: medium none;
+    padding: 5px 30px 5px 10px;
+    vertical-align: middle;
+}
+.review-editor-popup-setting-permission-container .review-editor-popup-setting-fieldset select:hover {
+    border-color: #ccc;
+}
+.review-editor-popup-setting-captcha-container {
+    font-size: 0;
+    text-align: center;
+}
+.review-editor-popup-setting-captcha-container .review-editor-captcha-field img {
+    height: 26px;
+    vertical-align: middle;
+    width: auto;
+}
+.review-editor-popup-setting-captcha-container .review-editor-captcha-field input[type="text"] {
+    font-size: 12px;
+    height: 26px;
+    padding: 0 10px;
+    vertical-align: middle;
+    width: auto;
+}
+.review-editor-popup-setting-statement-container {
+    background-color: #f8f8f8;
+    color: #666;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.review-editor-popup-setting-button-fold-up::after {
+    background-image: url("/f/zerkalo/364d4e5dfb03be7243861bd81a90562ca6041e31/pics/review_editor/svg_arrow_up.svg");
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 8px;
+    margin-bottom: 2px;
+    margin-left: 4px;
+    vertical-align: middle;
+    width: 14px;
+}
+.review-editor-popup-setting-button-fold-up:link, .review-editor-popup-setting-button-fold-up:visited, .review-editor-popup-setting-button-fold-up:hover, .review-editor-popup-setting-button-fold-up:active {
+    background-color: transparent;
+    color: #999;
+}
+.review-editor-popup-setting .rating-editor-container {
+    padding-left: 10px;
+}
+.review-editor-popup-setting-share-link {
+    margin: 15px 0 10px;
+}
+.review-editor-statement {
+    margin-top: 10px;
+    padding: 20px;
+    text-align: left;
+}
+.review-editor-statement-label {
+    font-size: 14px;
+    margin-bottom: 1em;
+}
+.review-editor-statement p {
+    margin: 0 0 1em;
+}
+.review-editor-statement p:last-child {
+    margin: 0;
+}
+.rating-editor-container {
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.rating-editor-container .rating-editor-star {
+    cursor: pointer;
+    display: inline-block;
+    padding-right: 1px;
+    vertical-align: middle;
+}
+.rating-editor-container .rating-editor-label {
+    color: #999;
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+}
