@@ -1,4 +1,4 @@
-extends ../layout
+extends ../../includes/front
 block otherStyle
   link(href="/css/movie/public/_all.css", rel="stylesheet")
   link(href="/css/movie/public/reg_login_pop.css", rel="stylesheet")
@@ -119,7 +119,7 @@ block content
           div.aside(stlye="position: static; left: 924.6px;")
             div(style="height:350px;width:100%;")
               embed(src="#{movie.flash}", allowFullScreen="true", quality="high", width="100%", height="100%", align="middle", type="application/x-shockwave-flash")
-      include ../footer
+      include ../../includes/footer
 block srcipts  
   script.
     $(function() {  

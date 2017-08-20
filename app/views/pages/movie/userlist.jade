@@ -3,7 +3,7 @@ html
   head
     meta(charset="utf-8")
     title #{title}
-    include ../includes/head
+    include ../../includes/head
   body
     .container
       .row
@@ -11,8 +11,7 @@ html
           thead
             tr
               th 名字
-              th 时间
-              th 查看
+              th 录入时间
               th 修改
               th 删除
           tbody
@@ -20,7 +19,6 @@ html
               tr(class="item-id-#{item._id}")
                 td #{item.username}
                 td #{moment(item.meta.updateAt).format('MM/DD/YYYY')}
-                td: a(target="_blank", href="../movie/#{item._id}") 查看
                 td: a(target="_blank", href="../admin/update/#{item._id}") 修改
                 td
                   button.btn.btn-danger(type="button",  onclick='deleteUser("#{item._id}")') 删除
