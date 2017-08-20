@@ -1,28 +1,6 @@
 module.exports = function(grunt) {
 
 	grunt.initConfig({
-		watch: {
-			jade: {
-				files: ['app/views/**'],
-				options: {
-					livereload: true
-				}
-			},
-			js: {
-				files: ['resources/js/**', 'app/models/**/*.js', 'app/controllers/**/*.js', 'app/schemas/**/*.js'],
-				options: {
-					livereload: true
-				}
-			}
-		/*	styles: {
-				files: ['resources/css/*.css'],
-				tasks: ['css'],
-				options: {
-					nospawn: true
-				}
-			}*/
-
-		},
 		nodemon: {
 			dev: {
 				options: {
@@ -41,7 +19,7 @@ module.exports = function(grunt) {
 			}
 		},
 		concurrent: {
-			tasks: ['nodemon', 'watch'],
+			tasks: ['nodemon'],
 			options: {
 				logConcurrentOutput: true
 			}
@@ -51,7 +29,6 @@ module.exports = function(grunt) {
 
 	grunt.option('force', true);
 
-	grunt.loadNpmTasks('grunt-contrib-watch'); // 监听文件变动
 	grunt.loadNpmTasks('grunt-nodemon'); // 监听入口文件
 	grunt.loadNpmTasks('grunt-concurrent'); 
 

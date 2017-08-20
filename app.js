@@ -15,7 +15,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://127.0.0.1:27017/movie',{useMongoClient:true});
 
 app.locals.moment = require('moment');
-app.set('views', './app/views/pages');
+app.set('views', './app/views/pages/movie');
 app.set('view engine', 'jade');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
