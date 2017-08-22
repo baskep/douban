@@ -26,7 +26,7 @@
 ## 3.项目运行
 
 ### 3.1. clone或download
->3.1.1.安装git后，可使用git clone https://github.com/zt14362/MovieWebSite.git 直接检出项目到本地仓库 <br>
+>3.1.1.安装git后，可使用 `git clone https://github.com/zt14362/MovieWebSite.git` 直接检出项目到本地仓库 <br>
 >3.1.2.也可以直接在页面点击download项目到指定目录
 
 ### 3.2.安装对应的node_module
