@@ -61,4 +61,4 @@
    5.2.详情页
    ![image](https://github.com/zt14362/MovieWebSite/raw/master/example/detail.png)
    5.3.选电影页
-   ![image](https://github.com/zt14362/MovieWebSite/raw/master/example/vgetMoreMovie.png)
+   ![image](https://github.com/zt14362/MovieWebSite/raw/master/example/getMoreMovie.png)
