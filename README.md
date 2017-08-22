@@ -55,10 +55,13 @@
 
 > 备注: 后台页面只有管理员才能进入，本项目中，数据库表`users`字段`role` 值为1的代表管理员。而注册的新用户，`role`值默认为0，也就是普通用户
 
-### 5.项目整体效果
-   5.1.首页
+## 5.项目整体效果
+   5.1.首页 <br>
    ![image](https://github.com/zt14362/MovieWebSite/raw/master/example/index.png) <br>
-   5.2.详情页
+   5.2.详情页 <br>
    ![image](https://github.com/zt14362/MovieWebSite/raw/master/example/detail.png) <br>
-   5.3.选电影页
+   5.3.选电影页 <br>
    ![image](https://github.com/zt14362/MovieWebSite/raw/master/example/getMoreMovie.png)
+ 
+ ## 6.其它
+    目前这个项目功能有限，很不完善，后期有时间时，会进一步完善和优化
