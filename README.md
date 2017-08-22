@@ -39,7 +39,7 @@
    
 ### 4.浏览器访问路径
 
-#### >>1.1前台页面
+#### 1.1前台页面
 1.1.`http://localhost:3000/getLoginPage` 进入登录页面 <br>
 1.2.`http://localhost:3000/getRegistePage` 进入注册页面 <br>
 1.3.`http://localhost:3000/` 进入网站的首页 <br>
