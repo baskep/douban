@@ -61,7 +61,7 @@
    5.2.详情页 <br>
    ![image](https://github.com/zt14362/MovieWebSite/raw/master/example/detail.png) <br>
    5.3.选电影页 <br>
-   ![image](https://github.com/zt14362/MovieWebSite/raw/master/example/getMoreMovie.png)
+   ![image](https://github.com/zt14362/MovieWebSite/raw/master/example/MoreMovie.png)
  
 ## 6.其它
 目前这个项目功能有限，很不完善，后期有时间时，会进一步完善和优化
