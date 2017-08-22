@@ -54,13 +54,15 @@ function loadCategoryMovieData(len, result) {
 				+		'<div class="cover-wp">'
 				+			'<img src="' + result.movies[i].poster + '" />'
 				+		'</div>'
-				+ 		'<p>' + result.movies[i].title 
+				+ 		'<p>' + result.movies[i].title + '&nbsp;'
+				+			'<strong>' + result.movies[i].score
 				+ 		'</p>'
 				+	'</a>'
 
 	}
 	$('.list-wp .list').append(htmlEle);
 }
+
 
 // 加载更多电影
 function loadMore(skip, item) {
