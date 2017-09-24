@@ -1,0 +1,49 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    title #{title}
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon"/>
+    script(src="/jquery/dist/jquery.min.js")
+    link(href="/css/music/index/index.css", rel="stylesheet")
+    link(href="/css/music/public/douban.css", rel="stylesheet")
+    link(href="/css/music/public/bundle.css", rel="stylesheet")
+
+    block otherStyle
+
+
+  body
+    div#db-global-nav.global-nav 
+      div.bd
+        div.top-nav-info
+          if user
+            a 欢迎您,#{user.username}
+            a.navbar-link(href="#" onclick='logout()') 注销
+          else
+            a.nav-register(href="/getRegistePage") 注册
+            a.nav-login(href="/getLoginPage") 登录
+        div.global-nav-items
+          ul
+            li
+              a(href="#") 豆瓣
+            li
+              a(href="/") 电影
+            li
+              a(href="/musciIndex") 音乐
+    div#db-nav-music.nav
+      div.nav-wrap
+        div.nav-primary
+          div.nav-logo(style="background-color:rgb(240,243,245)")
+            a(href="/musciIndex") 豆瓣音乐
+          div.nav-search
+            form(action="/searchMusic" method="get")
+              fieldset
+                legend 搜索
+                label(for="inp-query")
+                div.inp
+                  input#inp-query(name="search_text" size="22" maxlength="60" placeholder="歌手、歌曲" value="" autocomplete="off" class="placeholder")
+                div.inp-btn
+                  input(value="搜索" type="submit")
+    block content
+block srcipts 
+

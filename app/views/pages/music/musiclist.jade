@@ -1,0 +1,117 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    title #{title}
+    include ../../includes/head
+    script(src="/js/bootstrap-paginator.js")
+    link(href="/css/common/common.css" rel="stylesheet")
+  body
+    div.container(style="width: 100%")
+      form.form-inline.searchArea
+        div.form-group.col-xs-4.col-md-4.col-lg-4
+          label.col-xs-2.col-md-2.col-lg-2 音乐名:
+          input#musicname.form-control.col-xs-10.col-md-10.col-lg-10(type="text")
+        div.form-group.col-xs-4.col-md-4.col-lg-4
+          label.col-xs-2.col-md-2.col-lg-2 作者:
+          input#author.form-control.col-xs-10.col-md-10.col-lg-10(type="text")
+        div.form-group.col-xs-4.col-md-4.col-lg-4
+          label.col-xs-2.col-md-2.col-lg-2 国家:
+          input#country.form-control.col-xs-10.col-md-10.col-lg-10(type="text")
+      div.buttonGroup.row
+        div.col-xs-2.col-md-2.col-lg-2
+          button.btn.btn-primary(type="button" style="margin-top: 10px;" onclick="search()") 
+            span.glyphicon.glyphicon-search 查询
+      div.row
+        table.table.table-hover.table-bordered
+          thead
+            tr
+              th 音乐名称
+              th 作者
+              th 国家
+              th 发行年份
+              th 录入时间
+              th 类型
+              th 豆瓣评分
+              th 操作
+          tbody
+            each item in musics
+              tr(class="item-id-#{item._id}")
+                td #{item.title}
+                td #{item.author}
+                td #{item.country}
+                td #{item.year}
+                td #{moment(item.meta.updateAt).format('YYYY-MM-DD HH :SS')}
+                td #{item.genres}
+                td #{item.score} 
+                td
+                  button.btn.btn-default(type="button" onclick="tansferDetail('#{item._id}')") 
+                    span.glyphicon.glyphicon-share-alt 
+                  button.btn.btn-default(type="button" onclick="transferEdit('#{item._id}')") 
+                    span.glyphicon.glyphicon-edit 
+                  button.btn.btn-default(type="button" onclick="deleteMusic('#{item._id}')") 
+                    span.glyphicon.glyphicon-trash
+    div
+      div(style="float: left;margin-top: 25px;")
+        span 共有 #{count} 条数据
+      div(style="float:right")
+        ul#pagination
+      div#attribute(style="display: none;" data-count="#{count}" data-currentPage="#{currentPage}")
+script(src="/js/public.js")
+script.
+    window.onload = function() {
+        var element = $('#pagination');
+        var options = {
+            bootstrapMajorVersion: 3,
+            currentPage: $('#attribute').attr('data-currentPage'),
+            numberOfPages: 10,
+            totalPages: Math.ceil($('#attribute').attr('data-count') / 10),
+            onPageClicked: function(event, originalEvent, type, page) {
+                turnpage(page);
+            }
+        }
+        element.bootstrapPaginator(options);
+    }
+
+    // 查询
+    function search() {
+        var currentPage = $('#attribute').attr('data-currentPage');
+        turnpage(currentPage);
+    }
+
+    // 翻页
+    function turnpage(page) {
+        var musicname = $('#musicname').val(),
+            author = $('#author').val(),
+            country = $('#country').val();
+        window.location.href = '/musiclist?currentPage=' + page 
+                            + '&musicname=' + musicname 
+                            + '&author=' + author 
+                            + '&country=' + country;
+
+    } 
+
+    // 跳转到详情页
+    function tansferDetail() {
+        window.location.href = "/music/" + arguments[0];
+    }
+
+    // 跳转到修改页
+    function transferEdit() {
+        window.location.href = "/updatemusic/" + arguments[0];
+    }
+
+    // 删除音乐
+    function deleteMusic() {
+        if(confirm('确认删除此音乐?')) {
+            $.get('/deleteMusic', {
+                id : arguments[0]
+            }, function(result) {
+                if(result.flag === true || result.flag === 'true') {
+                    refresh();
+                } else {
+                    alert('删除失败');
+                }
+            });
+        }
+    }

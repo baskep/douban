@@ -1,5 +1,89 @@
-{ "_id" : { "$oid" : "598d8106c2f623a5248c283d" }, "name" : "动漫", "meta" : { "updateAt" : { "$date" : "2017-08-11T10:29:33.366+0000" }, "createAt" : { "$date" : "2017-08-11T10:03:50.048+0000" } }, "movies" : [ { "$oid" : "598d818dc2f623a5248c2842" }, { "$oid" : "598d81e3c2f623a5248c2843" }, { "$oid" : "598d8210c2f623a5248c2844" }, { "$oid" : "598d8283c2f623a5248c2845" }, { "$oid" : "598d82eec2f623a5248c2846" }, { "$oid" : "598d8326c2f623a5248c2847" }, { "$oid" : "598d838ad6e6afcb8449733a" }, { "$oid" : "598d83c3d6e6afcb8449733b" }, { "$oid" : "598d83fdd6e6afcb8449733c" }, { "$oid" : "598d843dd6e6afcb8449733d" }, { "$oid" : "598d849ad6e6afcb8449733e" }, { "$oid" : "598d84cfd6e6afcb8449733f" }, { "$oid" : "598d850bd6e6afcb84497340" }, { "$oid" : "598d8567d6e6afcb84497341" }, { "$oid" : "598d85bfd6e6afcb84497342" }, { "$oid" : "598d860ed6e6afcb84497343" }, { "$oid" : "598d862cd6e6afcb84497344" }, { "$oid" : "598d8685d6e6afcb84497345" }, { "$oid" : "598d86d6d6e6afcb84497346" }, { "$oid" : "598d870dd6e6afcb84497347" } ], "__v" : 20 }
-{ "_id" : { "$oid" : "598d810fc2f623a5248c283e" }, "name" : "剧情", "meta" : { "updateAt" : { "$date" : "2017-08-11T10:30:57.646+0000" }, "createAt" : { "$date" : "2017-08-11T10:03:59.445+0000" } }, "movies" : [ { "$oid" : "598d8761613b21d914082ea9" } ], "__v" : 1 }
-{ "_id" : { "$oid" : "598d8116c2f623a5248c283f" }, "name" : "奇幻", "meta" : { "updateAt" : { "$date" : "2017-08-11T10:31:33.010+0000" }, "createAt" : { "$date" : "2017-08-11T10:04:06.596+0000" } }, "movies" : [ { "$oid" : "598d8784613b21d914082eaa" } ], "__v" : 1 }
-{ "_id" : { "$oid" : "598d811cc2f623a5248c2840" }, "name" : "动作", "meta" : { "updateAt" : { "$date" : "2017-08-11T10:32:36.983+0000" }, "createAt" : { "$date" : "2017-08-11T10:04:12.530+0000" } }, "movies" : [ { "$oid" : "598d87c4613b21d914082eab" } ], "__v" : 1 }
-{ "_id" : { "$oid" : "598d811fc2f623a5248c2841" }, "name" : "爱情", "meta" : { "updateAt" : { "$date" : "2017-08-11T10:51:30.456+0000" }, "createAt" : { "$date" : "2017-08-11T10:04:15.528+0000" } }, "movies" : [ { "$oid" : "598d8845613b21d914082eac" }, { "$oid" : "598d88f3613b21d914082ead" }, { "$oid" : "598d8934613b21d914082eae" }, { "$oid" : "598d8972613b21d914082eaf" }, { "$oid" : "598d89bf613b21d914082eb0" }, { "$oid" : "598d8ac0613b21d914082eb1" }, { "$oid" : "598d8aec613b21d914082eb2" }, { "$oid" : "598d8b51613b21d914082eb3" }, { "$oid" : "598d8ba7613b21d914082eb4" }, { "$oid" : "598d8c32613b21d914082eb5" } ], "__v" : 10 }
+{ 
+    "_id" : ObjectId("598d8106c2f623a5248c283d"), 
+    "name" : "动漫", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-11T10:29:33.366+0000"), 
+        "createAt" : ISODate("2017-08-11T10:03:50.048+0000")
+    }, 
+    "movies" : [
+        ObjectId("598d818dc2f623a5248c2842"), 
+        ObjectId("598d81e3c2f623a5248c2843"), 
+        ObjectId("598d8210c2f623a5248c2844"), 
+        ObjectId("598d8283c2f623a5248c2845"), 
+        ObjectId("598d82eec2f623a5248c2846"), 
+        ObjectId("598d8326c2f623a5248c2847"), 
+        ObjectId("598d838ad6e6afcb8449733a"), 
+        ObjectId("598d83c3d6e6afcb8449733b"), 
+        ObjectId("598d83fdd6e6afcb8449733c"), 
+        ObjectId("598d843dd6e6afcb8449733d"), 
+        ObjectId("598d849ad6e6afcb8449733e"), 
+        ObjectId("598d84cfd6e6afcb8449733f"), 
+        ObjectId("598d850bd6e6afcb84497340"), 
+        ObjectId("598d8567d6e6afcb84497341"), 
+        ObjectId("598d85bfd6e6afcb84497342"), 
+        ObjectId("598d860ed6e6afcb84497343"), 
+        ObjectId("598d862cd6e6afcb84497344"), 
+        ObjectId("598d8685d6e6afcb84497345"), 
+        ObjectId("598d86d6d6e6afcb84497346"), 
+        ObjectId("598d870dd6e6afcb84497347")
+    ], 
+    "__v" : NumberInt(20)
+}
+{ 
+    "_id" : ObjectId("598d810fc2f623a5248c283e"), 
+    "name" : "剧情", 
+    "meta" : {
+        "updateAt" : ISODate("2017-09-11T01:32:35.425+0000"), 
+        "createAt" : ISODate("2017-08-11T10:03:59.445+0000")
+    }, 
+    "movies" : [
+        ObjectId("598d8761613b21d914082ea9"), 
+        ObjectId("59b5e7b3f144c7966ee165e4")
+    ], 
+    "__v" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("598d8116c2f623a5248c283f"), 
+    "name" : "奇幻", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-11T10:31:33.010+0000"), 
+        "createAt" : ISODate("2017-08-11T10:04:06.596+0000")
+    }, 
+    "movies" : [
+        ObjectId("598d8784613b21d914082eaa")
+    ], 
+    "__v" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("598d811cc2f623a5248c2840"), 
+    "name" : "动作", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-11T10:32:36.983+0000"), 
+        "createAt" : ISODate("2017-08-11T10:04:12.530+0000")
+    }, 
+    "movies" : [
+        ObjectId("598d87c4613b21d914082eab")
+    ], 
+    "__v" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("598d811fc2f623a5248c2841"), 
+    "name" : "爱情", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-11T10:51:30.456+0000"), 
+        "createAt" : ISODate("2017-08-11T10:04:15.528+0000")
+    }, 
+    "movies" : [
+        ObjectId("598d8845613b21d914082eac"), 
+        ObjectId("598d88f3613b21d914082ead"), 
+        ObjectId("598d8934613b21d914082eae"), 
+        ObjectId("598d8972613b21d914082eaf"), 
+        ObjectId("598d89bf613b21d914082eb0"), 
+        ObjectId("598d8ac0613b21d914082eb1"), 
+        ObjectId("598d8aec613b21d914082eb2"), 
+        ObjectId("598d8b51613b21d914082eb3"), 
+        ObjectId("598d8ba7613b21d914082eb4"), 
+        ObjectId("598d8c32613b21d914082eb5")
+    ], 
+    "__v" : NumberInt(10)
+}

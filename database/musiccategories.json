@@ -1,0 +1,53 @@
+{ 
+    "_id" : ObjectId("59a58f1ac3bf298c6f4e6b20"), 
+    "name" : "华语", 
+    "meta" : {
+        "updateAt" : ISODate("2017-09-18T02:01:35.470+0000"), 
+        "createAt" : ISODate("2017-08-29T15:58:18.428+0000")
+    }, 
+    "musics" : [
+        ObjectId("59a6d63bcba2ea36ecd9602e"), 
+        ObjectId("59a6d758cba2ea36ecd9602f"), 
+        ObjectId("59a6d866cba2ea36ecd96030"), 
+        ObjectId("59a6ddabcba2ea36ecd96033"), 
+        ObjectId("59a9802985124c66f01f344f"), 
+        ObjectId("59a981b585124c66f01f3450"), 
+        ObjectId("59a9822385124c66f01f3451"), 
+        ObjectId("59a9837885124c66f01f3452"), 
+        ObjectId("59a9842385124c66f01f3453"), 
+        ObjectId("59ae529a0089e225a5a6dfe5"), 
+        ObjectId("59ae53a17b228ace1000aac2"), 
+        ObjectId("59ae543e7b228ace1000aac3"), 
+        ObjectId("59ae56237b228ace1000aac4"), 
+        ObjectId("59ae589900c607298d5b60a0"), 
+        ObjectId("59b891b63cf2b4fca661f4ec"), 
+        ObjectId("59bf28fff0ac8e3bccba5770")
+    ], 
+    "__v" : NumberInt(16)
+}
+{ 
+    "_id" : ObjectId("59a58f1ec3bf298c6f4e6b21"), 
+    "name" : "欧美", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-30T15:38:51.765+0000"), 
+        "createAt" : ISODate("2017-08-29T15:58:22.378+0000")
+    }, 
+    "musics" : [
+        ObjectId("59a6d958cba2ea36ecd96031"), 
+        ObjectId("59a6dc0bcba2ea36ecd96032")
+    ], 
+    "__v" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("59a58f21c3bf298c6f4e6b22"), 
+    "name" : "日语", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-30T15:56:33.038+0000"), 
+        "createAt" : ISODate("2017-08-29T15:58:25.500+0000")
+    }, 
+    "musics" : [
+        ObjectId("59a6dee1cba2ea36ecd96034"), 
+        ObjectId("59a6e031cba2ea36ecd96035")
+    ], 
+    "__v" : NumberInt(2)
+}

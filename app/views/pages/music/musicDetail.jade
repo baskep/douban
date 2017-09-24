@@ -1,0 +1,482 @@
+extends ../../includes/musciFront
+block otherStyle
+	link(href="/css/music/detail/detail.css", rel="stylesheet")
+	link(href="/css/movie/detail/Bootstrap.css", rel="stylesheet")
+	style.
+		.hoverlay p {
+			text-align:center !important;
+		}
+		#info > span {
+			display:block;
+		}
+		.icon-volume {
+			background:rgba(0, 0, 0, 0) url('../images/icons.png') no-repeat scroll 0 -112px / 16px auto;
+			display: inline-block;
+			height: 16px;
+			width: 16px;
+		}
+		.container-player {
+			float:left;
+			width:58%
+		}
+		.left-time {
+			color: #999;
+			font-size: 14px;
+			font-weight: 400;
+			width: 40px;
+		}
+		.volume-wrapper {
+			display: inline-block;
+			position:relative;
+			top:15px;
+			width:20%;
+		}
+		.components-progress {
+			background: #ddd none repeat scroll 0 0;
+			cursor: pointer;
+			height: 3px;
+			width: 100%;
+		}
+		.icon {
+			background: rgba(0, 0, 0, 0) url("../images/icons.png") no-repeat scroll 0 0 / 32px auto;
+			display: inline-block;
+			height: 32px;
+			width: 32px;
+			cursor: pointer;
+		}
+		.pre {
+			background-position: 0 0;
+		}
+		.play {
+			background-position: 0 -64px;
+		}
+		.pause {
+			background-position: 0 -96px;
+		}
+		.next {
+			background-position: 0 -32px;
+		}
+		.cycle {
+			background-position: 0 -160px;
+		}
+		.icon div {
+			display: inline-block;
+		}
+		#tab-btn {
+			width: 70%;
+		}
+		#play-method {
+			width: 20%;
+		}
+		@keyframes rotation{
+			from {-webkit-transform: rotate(0deg);}
+			to {-webkit-transform: rotate(360deg);}
+		}
+		.rotation {
+			animation: 10s linear 0s normal none infinite running rotation;
+			transform: rotate(360deg);
+		}
+		.progress {
+			transition: width 0.1s;
+		}
+		.grid-16-8 .aside {
+			position: relative;
+			width: 510px;
+			left: 50px;
+		}
+		#music-content:hover {
+			cursor: move;
+		}
+		.pl a {
+			color:#111;
+		}
+		.animate {
+			border-radius: 50%;
+			height: 185px;
+			width: 185px;
+		}
+		.a_collect_btn img {
+			width: 16px;
+			height: 16px;
+		}
+block content
+	div#wrapper(style="width:1150px;")
+		h1
+			span #{music.title}
+		div#content
+			div.grid-16-8.clearfix
+				div.article
+					div.indent
+						div.subjectwrap.clearfix
+							div.subject.clearfix
+								div#mainpic
+									span.ckd-collect
+										a.nbg
+											img(src="#{music.poster}" style="width:120px;height:120px")
+								div#info.ckd-collect
+									span
+										span.pl 歌曲名:
+											a() #{music.title}
+									span
+										span.pl 创作者:
+											a(style="color:#111") #{music.author}
+									span
+										span.pl 发行地区:
+											a(style="color:#111") #{music.country}
+									span
+										span.pl 语言:
+											a(style="color:#111") #{music.language}
+									span
+										span.pl 发行:
+											a(style="color:#111") #{music.year}
+									span
+										span.pl 标签:
+											a(style="color:#111") #{music.genres}
+							div#interest_sectl
+								div.rating_wrap.clearbox
+									div.rating_logo 豆瓣评分
+									div.rating_self.clearfix
+										strong.ll.rating_num #{music.score}
+										div.rating_right 
+											div.ll.bigstar
+												span.starScore(style="display:none") #{music.starScore}
+											div.rating_sum
+												a.rating_people
+													span #{music.pv} 人评价
+									div.ratings-on-weight
+					div.related_info
+						h2          简介              · · · · · ·     
+						div#link-report
+							span.short
+								span #{music.summary}
+					div.comment-star(style="margin:20px 0 0 0")
+						评价: 
+						span.rating
+							span#stars
+								a.j.a_collect_btn
+									img#star1(src="/images/star.png" data-count="1" title="很差")
+								a.j.a_collect_btn
+									img#star1(src="/images/star.png" data-count="2" title="较差")
+								a.j.a_collect_btn
+									img#star1(src="/images/star.png" data-count="3" title="还行")
+								a.j.a_collect_btn
+									img#star1(src="/images/star.png" data-count="4" title="推荐")
+								a.j.a_collect_btn
+									img#star1(src="/images/star.png" data-count="5" title="力荐")
+						span#rateword.pl
+							.panel.panel-defatul
+							.panel-heading
+								h3 评论区
+							if musicComments && musicComments.length > 0
+								each item in musicComments
+									.panel-body
+										ul.media-list
+											hr
+											li.media
+											.pull-left
+												a.comment(href="#comments", data-cid="#{item._id}", data-tid="#{item.from._id}", data-cname="#{item.from.username}")
+													img.media-object(src="http://q2.qlogo.cn/g?b=qq&k=IicmNK5WOlXh6at7hTE9nRQ&s=100&t=1500878956&max_age=31536000", style="width: 64px; height: 64px;")
+											.media-body
+												p.media-heading #{item.from.username}
+												p #{item.content}
+												if item.reply && item.reply.length > 0
+													each reply in item.reply
+														.media
+														.pull-left
+															a.comment(href="#comments", data-cid="#{item._id}", data-tid="#{reply.from._id}" data-cname="#{item.from.username}")
+																img.media-object(src="http://tvax2.sinaimg.cn/crop.0.0.996.996.50/6ba2e66bly8fhx3gj8tvoj20ro0rojs2.jpg", style="width: 64px; height: 64px;")
+														.media-body
+															p.media-heading
+																span.text-info &nbsp;回复: &nbsp;
+																| #{reply.from.username}
+															p #{reply.content}
+
+						#comments
+							form#commentForm(method="POST", action="/musicComment")
+								input(type="hidden", name="musicComment[music]", id="musicID" value="#{music._id}")
+								if user
+									input(type="hidden", name="musicComment[from]", value="#{user._id}")
+								.form-group
+									textarea.form-control.commentArea(name="musicComment[content]", style="height:120px;overflow:hidden;resize:none;width:95%")
+								if user
+									button.btn.btn-primary(type='submit') 提交
+								else
+									a.navbar-link(href="/getLoginPage", ) 登录后评论
+
+				div#player
+				div.aside#music-content(style="box-shadow:0 0 5px rgba(0, 0, 0, 0.07);")
+					input#music-address(type="hidden" value="#{music.address}")
+					div.container-player
+						div
+							div.controll-wrapper
+								p(style="font-size:20px;").music-title #{music.title}
+								p #{music.author}
+								div.volume-container
+									p.left-time(style="display: inline-block;") 
+									i.icon-volume
+									div.volume-wrapper
+										div#volume-content.components-progress 
+											div.progress(style="width: 40%; background-color: rgb(177, 177, 177);height:100%")
+								div#progress-content.components-progress 
+									div.progress(style="width: 0.713357%; background-color: rgb(47, 152, 66);height:100%")
+								div.icon(style="margin-top:20px;width:100%;")
+									div#tab-btn
+										i.icon.pre
+										i.icon.play-music.play
+										i.icon.next
+									div#play-method
+										i.icon.cycle(style="float: right")
+					div#poster(style="float:right;")
+						img(class="rotation animate" src="#{music.poster}" alt="天使中的魔鬼" )
+		include ../../includes/footer
+block srcipts
+	script(src='../js/musicDetail.js')
+	script(src='../js/jquery.jplayer.min.js')
+	script.
+		var params = {
+			left: 0,
+			top: 0,
+			currentX: 0,
+			currentY: 0,
+			flag: false,
+			musictDuration: 0
+		};
+
+		window.onload = function() {
+			var content = document.getElementById("music-content");
+			startDrag(content);
+		}
+
+		//获取相关CSS属性
+		function getCss(o, key) {
+			return o.currentStyle ? o.currentStyle[key] : document.defaultView.getComputedStyle(o, false)[key];
+		};
+
+		//拖拽的实现
+		var startDrag = function(target) {
+			// 首先获取目标元素的left、top属性值
+			if (getCss(target, "left") !== "auto") {
+				params.left = getCss(target, "left");
+			}
+				if (getCss(target, "top") !== "auto") {
+				params.top = getCss(target, "top");
+			}
+
+			target.onmousedown = function(event) {
+
+			// 当鼠标按下时表示元素可以移动，将标记设为true;
+			params.flag = true;
+
+			if (event.preventDefault) {
+				event.preventDefault();
+			}else {
+				event.returnValue = false;
+			}
+
+			var e = event;
+			params.currentX = e.clientX;
+			params.currentY = e.clientY;
+			};
+
+			target.onmouseup = function() {
+				// 当鼠标松开时将标记设为false，表示不可移动
+				params.flag = false;
+				// 当鼠标松开时再次更新元素的位置
+				if (getCss(target, "left") !== "auto") {
+					params.left = getCss(target, "left");
+				}
+				if (getCss(target, "top") !== "auto") {
+					params.top = getCss(target, "top");
+				}
+			};
+
+			target.onmousemove = function(event) {
+				var e = event ? event : window.event;
+				// 获取到当前鼠标的位置
+				if (params.flag) {	
+					var nowX = e.clientX,
+						nowY = e.clientY;
+					var disX = nowX - params.currentX,
+						disY = nowY - params.currentY;
+					// 将元素的位置更新，parsenInt为了将属性值变为数字类型
+					target.style.left = parseInt(params.left) + disX + "px";
+					target.style.top = parseInt(params.top) + disY + "px";
+					}
+				}
+			};
+
+		$(function() {
+			var starScores = $('#interest_sectl .bigstar');
+			var ratingstars = $('#interest_sectl .bigstar .starScore').text();
+			$(starScores).addClass('bigstar' + ratingstars);
+
+			$('.comment').click(function(e){
+				var target = $(this);
+		        var cid = target.data('cid');
+		        var tid = target.data('tid');
+		        var cname = target.data('cname');
+		        if($('#tid').length === 0) {
+					$('<input>').attr({
+						type : 'hidden',
+						id : 'tid',
+						name : 'musicComment[tid]',
+						value : tid
+					}).appendTo('#commentForm');
+				} else {
+					$('#tid').val(tid);
+		        }
+
+		        if($('#cid').length === 0) {
+					$('<input>').attr({
+						type : 'hidden',
+			            id : 'cid',
+			            name : 'musicComment[cid]',
+			            value : cid
+					}).appendTo('#commentForm');
+		        } else {
+					$('#cid').val(cid);
+		        }
+		        $('.commentArea').attr('placeholder','回复 ' + cname);
+
+		      });
+
+		      // 播放音乐状态
+			$('.play-music').click(function() {
+		      	var classNames = $(".play-music").attr("class");
+		      	classNames = classNames.split(' ');
+		      	var len = classNames.length;
+		      	var index = 0;
+		     	for(var i = 0; i < len; i++) {
+		     		index = $.inArray("play", classNames); 
+		     	}
+		     	if(index === -1) {
+		     		$(this).removeClass('play');
+		     		$(this).addClass('pause');
+
+		     		$('.animate').removeClass('rotation');
+		     		$('#player').jPlayer('pause');
+		     	} else {
+		     		$(this).removeClass('pause');
+		     		$(this).addClass('play');
+
+		     		$('.animate').addClass('rotation');
+		     		$('#player').jPlayer('play');
+		     	
+		     	}
+			});
+
+
+		      // 播放音乐
+			$('#player').jPlayer({
+				supplied: 'mp3',
+				wmode: 'window',
+				preload: 'metadata', 
+				ready: function () {
+					var musicAddress = $('#music-address').val();
+					$(this).jPlayer("setMedia", { 
+						mp3: musicAddress     
+					}).jPlayer("play"); 
+				},
+				ended: function (event) {                          
+					$(this).jPlayer("play");
+				},
+				volume: 0.4
+			});
+
+			// 绑定音乐播放的一些事件
+			$('#player').bind($.jPlayer.event.timeupdate, function(e) {
+				params.musictDuration = e.jPlayer.status.duration;
+				$('.left-time').text($.jPlayer.convertTime(parseInt(e.jPlayer.status.currentTime)));
+				$('#progress-content .progress').css('width', e.jPlayer.status.currentPercentAbsolute  + '%');
+			});
+
+			// 电影ID
+			var musicID = $('#musicID').val();
+
+			// 获得各个等级的评价
+			$.get('/getMuicEvaluation', {
+				id: musicID
+			},function(result) {
+				var percent = 0, // 计算每个星级所占的百分比
+					percentStr = '', // 保存的百分比
+					personCount = 0, // 保存每个星级打分的人数
+					currentStar = '', // 访问各个星级的人数
+					pv = 0, // 保存所有评分人数
+					htmlEle = '' // DOM字符串
+
+				pv = result.music.pv;
+				for(var i = 5; i >= 1; i--) {
+					currentStar = 'stars' + i;
+					percent = ((result.music[currentStar] / pv) * 100).toFixed(1);
+					percentStr = percent + '%';
+					htmlEle += '<div class="item">'
+							+       '<span class="' + currentStar +' starstop' + '">'
+							+           i + '星'
+							+       '</span>'
+							+       '<div class="power" style="width:' + Math.round(percent*120 / 100) + 'px">'
+							+       '</div>'
+							+       '<span class="rating_per">'
+							+           percentStr
+							+       '</span>'
+							+   '</div>';
+				}
+				$('.ratings-on-weight').append(htmlEle);
+			});
+			
+			$('.a_collect_btn img').hover(function() {
+				var count = $(this).attr('data-count');
+				var text = $(this).attr('title');
+				var imgList = $('.a_collect_btn img');
+
+				$('#rateword').text(text);
+				for(var i = 0; i < count; i ++) {
+				$(imgList[i]).attr('src','/images/hover_star.png');
+				}
+			});
+
+			$('.a_collect_btn img').mouseout(function() {
+
+				$('#rateword').text('');
+				var imgList = $('.a_collect_btn img');
+
+				for(var i = 0, len = imgList.length; i < len; i ++) {
+					$(imgList[i]).attr('src','/images/star.png');
+				}
+			});
+
+			$('.a_collect_btn img').click(function() {
+				var count = $(this).attr('data-count');
+				if(confirm('确定评价?')) {
+					$.get('/evaluateMusic', {
+						musicID: musicID,
+						count: count
+					}, function(result) {
+
+					});
+				} 
+			});
+
+			// 音乐进度条点击事件
+			$('#progress-content').click(function(e) {
+				$('.play-music').removeClass('pause');
+				$('.play-music').addClass('play');
+
+				var progressContent = document.getElementById('progress-content');
+				var progressWidth = (e.clientX - progressContent.getBoundingClientRect().left) / progressContent.clientWidth;
+				$('#progress-content .progress').css('width', progressWidth*100 + '%');
+				$('#player').jPlayer('play', params.musictDuration * progressWidth);
+			});
+
+			// 音量进度条点击事件
+			$('#volume-content').click(function(e) {
+
+				var volumeContent = document.getElementById('volume-content');
+				var progressWidth = (e.clientX - volumeContent.getBoundingClientRect().left) / volumeContent.clientWidth;
+				$('#volume-content .progress').css('width', progressWidth*100 + '%');
+				$('#player').jPlayer('volume', progressWidth);
+
+			});
+		}); 
+
+
+				

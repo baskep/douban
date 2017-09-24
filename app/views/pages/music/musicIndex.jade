@@ -1,0 +1,100 @@
+extends ../../includes/musciFront
+block otherStyle
+	link(href="/css/music/public/home.css", rel="stylesheet")
+	link(href="/css/music/public/detail.css", rel="stylesheet")
+	style.
+		.hoverlay p {
+			text-align:center !important;
+		}
+block content
+	div#wrapper
+		div#content
+			div.grid-16-8.clearfix
+				div.article
+					div.popular-artists.section
+						ul.header
+							li.artists-tab 最热门歌曲 
+						div.artists(style="overflow:hidden")
+							if musics && musics.length > 0
+								each item in musics
+									div.artist-item
+										div.cover
+											a.artist-photo.player-playable(href="/music/#{item._id}" target="_blank")
+												img(src="#{item.poster}")
+												div.player-round-btn-bg
+													div.hoverlay
+														p #{item.title}
+														p #{item.language}
+														p #{item.summary}
+													span.span-player-round-btn(date-id="#{item.title}")
+														i.icon-player-round-btn
+										a.title.primary-link.fleece #{item.title}
+										p.genre #{item.language}
+					div
+						div.section-switcher 
+							div.header
+								span.title 音乐分类
+								if musicCategories && musicCategories.length > 0
+									each musicItem in musicCategories
+										ul.section-titles
+											li
+												a(href="#") #{musicItem.name}
+							div.content
+								div.album-content
+				div.aside
+					div.hot-artist-songs
+						div.side-block
+							div.header
+								span 新歌榜
+								a.play-button(href="/getMoreMusic")
+									span 更多
+							div.content
+								ul.hot-artist-songs
+									if latestMousics && latestMousics.length >0
+										each lastestMusic in latestMousics
+											li.artist-song
+												div.avatar
+													img(src="#{lastestMusic.poster}")
+													span.icon(data-musicUrl="/music/#{lastestMusic._id}")
+														i.icon-play
+												h3 #{lastestMusic.title}
+												p
+													span #{lastestMusic.author}
+												span.rank
+					div.s
+						div.mobile-app-entrance.block5.app-music
+							a.entrance-link(href="https://artist.douban.com/app")
+								span.app-icon.icon-artists
+								span.main-title 豆瓣音乐人客户端
+								span.sub-title 发现当下最酷的独立音乐
+					div.contact.mod
+						h2 联系我们
+							a(href="mailto:artists@douban.com") artists@douban.com
+						ul.embassy-list.clearfix
+							li
+								a.icon-embassy-site(href="https://site.douban.com/artists/" target="_blank")
+								a.primary-link(href="https://site.douban.com/artists/" target="_blank") 音乐人小站
+							li
+								a.icon-embassy-weibo(href="http://weibo.com/doubanartists" target="_blank")
+								a.primary-link(href="http://weibo.com/doubanartists" target="_blank") 音乐人微博
+							li
+								a.icon-embassy-weixin
+									div.hover
+										img(src="https://img3.doubanio.com/f/music/8e0e634c8b45ae2168b7a07e46d4678c9b0ca2f8/pics/music/home/home_qrcode.png")
+								a.primary-link() 音乐人微信
+						ul.embassy-list.clearfix
+							li
+								a.icon-embassy-site-fm(href="https://site.douban.com/douban.fm/" target="_blank")
+								a.primary-link(href="https://site.douban.com/douban.fm/" target="_blank") FM小站
+							li
+								a.icon-embassy-weibo(href="http://weibo.com/doubanradio" target="_blank")
+								a.primary-link(href="http://weibo.com/doubanradio" target="_blank") FM微博
+							li
+								a.icon-embassy-weixin
+									div.hover
+										img(src="https://img3.doubanio.com/f/music/c4666eec39a189287917319238f4097c3fddc974/pics/music/home/weixin.jpg")
+								a.primary-link() FM微信
+			include ../../includes/footer
+block srcipts  
+	script(src='../js/musicIndex.js')
+		

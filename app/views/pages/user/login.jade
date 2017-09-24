@@ -1,0 +1,39 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    title #{title}
+    script(src="/jquery/dist/jquery.min.js")
+    link(href="/css/movie/login/login.css", rel="stylesheet")
+    link(rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon")
+  body
+    div.wrapper(style="margin-top: 70px;")
+      div#header
+        a.logo(href="") 登录豆瓣
+      div#content
+        h1 登录豆瓣
+        div.article
+          form#lzform(name="lzform" method="post" action="/login")
+            div(style="display:none;")
+              img(src="https://www.douban.com/pics/blank.gif")
+              input(name="source" value="None" type="hidden")
+              input(name="redir" value="https://movie.douban.com/" type="hidden")
+            div.item
+              label 账号
+              input#username.basic-input(name="user[username]" maxlength="60" placeholder="用户名" tabindex="1" type="text")
+            div.item
+              label 密码
+              input#password.basic-input(name="user[password]" placeholder="密码" maxlength="20" tabindex="2" type="password")
+            div.item
+              label &nbsp;
+              input.btn-submit(value="登录" name="login"  tabindex="5" type="submit")
+        ul#side-nav.aside
+          li &gt;&nbsp;还没有豆瓣帐号？
+            a(rel="nofollow" href="/getRegistePage") 立即注册
+          li &gt;&nbsp;
+            a(href="https://www.douban.com/mobile/") 点击下载豆瓣移动应用
+          li &gt;&nbsp;
+            a(href="/index") 豆瓣电影
+          li &gt;&nbsp;
+            a(href="/musciIndex") 豆瓣音乐
+      include ../../includes/footer

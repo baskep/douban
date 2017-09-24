@@ -1,0 +1,173 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    title #{title}
+    include ../../includes/head
+    link(href="/css/common/common.css" rel="stylesheet")
+    script(src="/js/bootstrap-paginator.js")
+    style.
+        .row {
+            margin: 10px 0;
+        }
+        .row label {
+            margin-left: 35px;
+            width: 10%;
+        }
+        .form-control {
+            display: inline-block;
+            width: 50%;
+        }
+
+  body
+    div(style="width: 100%;")
+      form.form-inline.searchArea
+        div.form-group
+          label 用户名:
+          input#username.form-control(type="text")
+        button.btn.btn-primary(type="button" onclick="search()") 
+            span.glyphicon.glyphicon-search 查询
+        button.btn.btn-primary(type="button" onclick="add()" style="margin-left: 15px;") 
+            span.glyphicon.glyphicon-plus 新增
+      div.row
+        table.table.table-hover.table-bordered
+          thead
+            tr
+              th 用户名
+              th 邮箱
+              th 注册时间
+              th 操作
+          tbody
+            each item in users
+              tr(class="item-id-#{item._id}")
+                td #{item.username}
+                td #{item.emali}
+                td #{moment(item.meta.updateAt).format('YYYY-MM-DD HH :SS')}
+                td 
+                  button.btn.btn-default(type="button" onclick="edit('#{item._id}')")
+                    span.glyphicon.glyphicon-edit
+                  button.btn.btn-default(type="button" onclick="deleteUser('#{item._id}')")
+                    span.glyphicon.glyphicon-trash 
+    div
+      div(style="float: left;margin-top: 25px;")
+        span 共有 #{count} 条数据
+      div(style="float:right")
+        ul#pagination
+      div#attribute(style="display: none;" data-count="#{count}" data-currentPage="#{currentPage}")
+div#addUser.modal.fade(ole="dialog" aria-labelledby="gridSystemModalLabel")
+  div.modal-dialog(role="document")
+    div.modal-content
+      div.modal-header
+        h4.modal-title 新增用户
+      div.modal-body
+        form#lzform(name="lzform" method="post" action="/signup")
+          div.row
+            label 用户名:
+            input.user-name.form-control(type="text" value="" name="user[username]")
+          div.row
+            label 邮箱:
+            input.user-email.form-control(type="text" value="" name="user[emali]")
+          div.row
+            label 密码:
+            input.user-password.form-control(type="text" value="" name="user[password]")
+          hr
+          div
+            button.btn.btn-primary(type="submit") 确定
+            button.btn.btn-default(data-dismiss="modal") 取消
+div#editUser.modal.fade(ole="dialog" aria-labelledby="gridSystemModalLabel")
+  div.modal-dialog(role="document")
+    div.modal-content
+      div.modal-header
+        h4.modal-title 修改用户信息
+      div.modal-body
+        div.row(style="display: none")
+          label 用户ID
+          input.userID.form-control(type="text" value="")
+        div.row
+          label 用户名:
+          input.username.form-control(type="text" value="")
+        div.row
+          label 邮箱:
+          input.email.form-control(type="text" value="")
+      div.modal-footer
+        button.btn.btn-primary(onclick="updateUser()") 确定
+        button.btn.btn-default(data-dismiss="modal") 取消
+
+script(src="/js/public.js")
+script.
+    window.onload = function() {
+        var element = $('#pagination');
+        var options = {
+            bootstrapMajorVersion: 3,
+            currentPage: $('#attribute').attr('data-currentPage'),
+            numberOfPages: 10,
+            totalPages: Math.ceil($('#attribute').attr('data-count') / 10),
+            onPageClicked: function(event, originalEvent, type, page) {
+                turnpage(page);
+            }
+        }
+        element.bootstrapPaginator(options);
+    }
+
+    // 查询
+    function search() {
+        var currentPage = $('#attribute').attr('data-currentPage');
+        turnpage(currentPage);
+    }
+
+    // 翻页
+    function turnpage(page) {
+        var username = $('#username').val()
+        window.location.href = '/userlist?currentPage=' + page 
+                           + '&username=' + username ;
+
+    }
+
+    // 弹出新增Modal
+    function add() {
+        $('#addUser').modal('show');
+    }
+
+    // 弹出修改Modal
+    function edit() {
+        $.get('/getUserById', {
+            userId: arguments[0]
+        }, function(result) {
+            $('.userID').val(result.user[0]._id);
+            $('.username').val(result.user[0].username);
+            $('.email').val(result.user[0].emali);
+        });
+
+        $('#editUser').modal('show');
+    }
+
+    // 确认修改
+    function updateUser() {
+        $.get('/updateUser', {
+            userID: $('.userID').val(),
+            username: $('.username').val(),
+            emali: $('.email').val()
+        }, function(result) {
+            if(result.flag === true || result.flag === 'true') {
+                window.location.reload();
+            } else {
+                alert('修改用户信息失败');
+            }
+        });
+    }
+
+    // 删除用户
+    function deleteUser() {
+        if(confirm('确认删除此用户?')) {
+            $.get('/deleteUser', {
+                id : arguments[0]
+            }, function(result) {
+                if(result.flag === true || result.flag === 'true') {
+                    refresh();
+                } else {
+                    alert('删除失败');
+                }
+            });
+        }
+    }
+

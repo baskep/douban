@@ -1,0 +1,70 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    title #{title}
+    script(src="/jquery/dist/jquery.min.js")
+    link(href="/css/movie/registe/registe.css", rel="stylesheet")
+    link(rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon")
+    style.
+      .side li{
+        margin-top:10px;
+      }
+  body
+    div.header(style="margin-top: 70px;")
+      div#header
+        div.site-nav.single-nav
+          div.site-nav-logo
+            a
+              img(src="https://img3.doubanio.com/dae/accounts/static/pics/douban/lg_account.png" alt="豆瓣")
+    div.wrapper
+      h1 欢迎加入豆瓣
+      div.article
+        form(name="lzform" method="post" action="/signup"  onsubmit="return registeValidation()")
+          div(style="display:none;")
+            input(name="source" value="movie" type="hidden")
+            input(name="redir" value="  " type="hidden")
+            img(src="https://www.douban.com/pics/blank.gif" onerror="document.lzform.action='https://accounts.douban.com/register'")
+          div.item.extra-tips
+            label 邮箱
+            input#email.basic-input(name="user[emali]" maxlength="60" tabindex="1" value="" type="text")
+            span.validate-error#emailError(style="display:none") 邮箱不能为空
+            span.validate-error#emailRuleError(style="display:none") 邮箱格式不正确
+          div.item.extra-tips
+            label 密码
+            input#password.basic-input(name="user[password]" tabindex="2" maxlength="20" type="password")
+            span.validate-error#pdError(style="display:none") 密码不能为空
+          div.item.extra-tips
+            label 用户名
+            input#username.basic-input(name="user[username]" maxlength="15" tabindex="3" value="" type="text")
+            span.validate-error#nameError(style="display:none") 用户名不能为空
+          div.suggestion
+            span.tips 第一印象很重要，起个响亮的名号吧
+          div.item-submit
+            label &nbsp;
+            input#button.btn-submit.enabled(name="register" value="注册" tabindex="6" type="submit" style="margin-top:30px;")
+      div.aside
+        ul.side.nav
+          li &gt;&nbsp;已经拥有豆瓣帐号? 
+            a(rel="nofollow" href="/getLoginPage") 直接登录
+          li &gt;&nbsp;
+            a(href="https://www.douban.com/mobile/") 点击下载豆瓣移动应用
+          li &gt;&nbsp;
+            a(href="/index") 豆瓣电影
+          li &gt;&nbsp;
+            a(href="/musciIndex") 豆瓣音乐
+  div.footer
+    div#footer
+      span#icp.fleft.gray-link &copy; 2005－2017 douban.com, all rights reserved
+      span.fright
+        a(href="https://www.douban.com/about") 关于豆瓣.
+        a(href="https://www.douban.com/jobs") 在豆瓣工作.
+        a(href="https://www.douban.com/about?topic=contactus") 联系我们.
+        a(href="https://www.douban.com/about?policy=disclaimer") 免责声明.
+        a(href="https://www.douban.com/help/") 帮助中心.
+        a(href="https://developers.douban.com/" target="_blank") 开发者.
+        a(href="https://www.douban.com/mobile/") 移动应用.
+        a(href="https://www.douban.com/partner/") 豆瓣广告
+script(src="./js/registe.js")
+
+  

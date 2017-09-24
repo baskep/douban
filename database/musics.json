@@ -1,0 +1,425 @@
+{ 
+    "_id" : ObjectId("59a6d63bcba2ea36ecd9602e"), 
+    "title" : "晴天", 
+    "author" : "周杰伦", 
+    "genres" : "周杰伦/我很忙/台湾/Jay/Pop/流行/2007/牛仔很忙", 
+    "country" : "中国", 
+    "language" : "华语", 
+    "poster" : "https://img3.doubanio.com/spic/s2753832.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/%E6%99%B4%E5%A4%A9.mp3", 
+    "year" : "2007-11-01", 
+    "score" : "8.5", 
+    "starScore" : "45", 
+    "stars5" : NumberInt(22704), 
+    "stars4" : NumberInt(15557), 
+    "stars3" : NumberInt(5262), 
+    "stars2" : NumberInt(257), 
+    "stars1" : NumberInt(64), 
+    "summary" : "《晴天》是一首偏校园怀旧风的Britpop歌曲。这是首浪漫的少年情歌，有风花雪月，更多的是怅然若失，很散文诗式的情怀，用周杰伦的方式演绎，就更带点伤感。这首歌将回忆的思绪充分放大，校园时代的青涩，甜美纯真的爱情，桀骜不驯的叛逆，在这首歌里全都有体现。歌词中出彩的“re si duo si”的日本发音，恰到好处的衔接，听上去简直如一个美丽而忧伤的青春爱情故事，让人有掉泪的冲动。MV中的大提琴演奏将旋律升华到艺术的气质，最后的rap更是增加了周杰伦独特的情歌特色", 
+    "meta" : {
+        "updateAt" : ISODate("2017-09-18T01:59:22.708+0000"), 
+        "createAt" : ISODate("2017-08-30T15:14:03.247+0000")
+    }, 
+    "pv" : NumberInt(43844), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59a6d758cba2ea36ecd9602f"), 
+    "title" : "青花", 
+    "author" : "周传雄", 
+    "genres" : "周传雄/蓝色土耳其/小刚/台湾/青花/华语/流行/pop", 
+    "country" : "中国", 
+    "language" : "华语", 
+    "poster" : "https://img3.doubanio.com/spic/s4718201.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/%E9%9D%92%E8%8A%B1-%E5%91%A8%E4%BC%A0%E9%9B%84.mp3", 
+    "year" : "2007-10-25", 
+    "score" : "7.9", 
+    "starScore" : "40", 
+    "stars5" : NumberInt(165), 
+    "stars4" : NumberInt(255), 
+    "stars3" : NumberInt(125), 
+    "stars2" : NumberInt(7), 
+    "stars1" : NumberInt(3), 
+    "summary" : "《青花》歌词氛围中带有浓厚的江南气息，以中国最著名的青花陶瓷艺术象徵信物，勾绘出人们面对爱情聚散时的纠葛心情及身处爱情中对於信守承诺的在乎与执著。\r\n《青花》的旋律和配乐古典味十足而又饱含摇滚的气息，歌词的意象好像是莎士比亚献给情人的十四行诗一般悠远弥长，周传雄七分力道的演绎蕴含了拨千斤的能量。宣泄浮躁远了，哀怨嗟叹远了，盛夏般火热的情感在时过境迁之后，剩下的只有无尽的寒冷与绵延的哀愁。一种后知后觉的坚持油然而生，让人更加感受到承诺的力量，才发现，信物是爱的绵延。《青花》——经典的周式情歌所诠释的情感，就好像这个季节的风，一如既往地侵蚀躲在棉被里的你，抚慰你心的碎片，随之而来的将是欲罢不能的夜夜失眠", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-30T15:18:48.293+0000"), 
+        "createAt" : ISODate("2017-08-30T15:18:48.293+0000")
+    }, 
+    "pv" : NumberInt(568), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59a6d866cba2ea36ecd96030"), 
+    "title" : "陪你度漫长岁月", 
+    "author" : "陈奕迅", 
+    "genres" : "陈奕迅/陪你度过漫长岁月/OST/香港/华语/2015/单曲/Eason", 
+    "country" : "中国", 
+    "language" : "华语", 
+    "poster" : "https://img3.doubanio.com/spic/s28316373.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/%E9%99%AA%E4%BD%A0%E5%BA%A6%E8%BF%87%E6%BC%AB%E9%95%BF%E5%B2%81%E6%9C%88-%E9%99%88%E5%A5%95%E8%BF%85.mp3", 
+    "year" : "2015-10-14", 
+    "score" : "7.1", 
+    "starScore" : "35", 
+    "stars5" : NumberInt(677), 
+    "stars4" : NumberInt(703), 
+    "stars3" : NumberInt(524), 
+    "stars2" : NumberInt(84), 
+    "stars1" : NumberInt(29), 
+    "summary" : "歌曲《陪你度过漫长岁月》延续陈奕迅一贯的“E式情歌”风格，透过感人的旋律传达心声，贯彻了陈奕迅多年以来的音乐固定风格。[1] \r\n歌曲契合了影片主题，“我是沉默的存在，不当你的世界，只作你肩膀”、“一次次失去又重来，我没离开，陪伴是最长情的告白”等歌词句句戳中心窝，而整首歌曲中出现最高频率的词眼“陪伴”更是地完美概括出电影《陪安东尼度过漫长岁月》的暖心内核。", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-30T15:23:18.204+0000"), 
+        "createAt" : ISODate("2017-08-30T15:23:18.204+0000")
+    }, 
+    "pv" : NumberInt(2017), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59a6d958cba2ea36ecd96031"), 
+    "title" : "blank space", 
+    "author" : "Taylor Swift", 
+    "genres" : "TaylorSwift/欧美/Pop/美国/2014/欧美丨专辑/US", 
+    "country" : "美国", 
+    "language" : "英语", 
+    "poster" : "https://img1.doubanio.com/spic/s28337387.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/Blank%20Space.mp3", 
+    "year" : "2015-11-10", 
+    "score" : "7.8", 
+    "starScore" : "40", 
+    "stars5" : NumberInt(4434), 
+    "stars4" : NumberInt(3565), 
+    "stars3" : NumberInt(1441), 
+    "stars2" : NumberInt(237), 
+    "stars1" : NumberInt(199), 
+    "summary" : "《Blank Space》的节拍器衔接着开场曲，琳琅满耳的原音吉他、电吉他、键盘乐器及节拍乐器编排、渐进丰富的编曲层次令歌曲略显饱满，成为专辑《1989》中旋律方面的佼佼者[19]  。泰勒·斯威夫特毛骨悚然的重复哼唱就像食人族一样[20]  ，歌曲结构也相对简单，同时以女歌手Lorde类型的电音乐为基础，这样明亮、轻松的歌曲听起来并不多见，但这种感觉也决不是后者所能创造出来的[21]  。这首歌的音乐以及泰勒·斯威夫特自嘲的口吻，体现了《1989》这张专辑本质的闪耀", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-30T15:27:20.873+0000"), 
+        "createAt" : ISODate("2017-08-30T15:27:20.873+0000")
+    }, 
+    "pv" : NumberInt(9876), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59a6dc0bcba2ea36ecd96032"), 
+    "title" : "Space Bound", 
+    "author" : "Eminem", 
+    "genres" : "eminem/rap/hip-hop/美国/2010/欧美/pop/hardcore-rap", 
+    "country" : "美国", 
+    "language" : "英语", 
+    "poster" : "https://img3.doubanio.com/spic/s4374295.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/Space%20Bound.mp3", 
+    "year" : "2010-06-22", 
+    "score" : "8.8", 
+    "starScore" : "45", 
+    "stars5" : NumberInt(5561), 
+    "stars4" : NumberInt(4176), 
+    "stars3" : NumberInt(1057), 
+    "stars2" : NumberInt(87), 
+    "stars1" : NumberInt(24), 
+    "summary" : "《Space Bound》当中对吉他的运用将这首歌变作《Recovery》专辑里最能体现阿姆黯然神伤的那一面，如今嘻哈音乐当中对乐器的运用开始呈现更为宽泛的局面，阿姆清晰伶俐的口齿得以在吉他配乐的衬托下更凸现了另外一种特点——即深情，作为一个rapper的他也在《Space Bound》当中展示了其作为一个singer的能力，chorus段落当中他甚至启用到了他的假音来演唱，不失为整张专辑里的一个最大亮点。《Space Bound》里，Eminem更是少见的唱起了假音，俨然成为了一个歌手，不仅让人耳目一新，作品本身也让人为之动容。", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-30T15:38:51.751+0000"), 
+        "createAt" : ISODate("2017-08-30T15:38:51.751+0000")
+    }, 
+    "pv" : NumberInt(10906), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59a6ddabcba2ea36ecd96033"), 
+    "title" : "I Don't Konw ", 
+    "author" : "王詩安", 
+    "genres" : "王诗安/台湾/2016/华语/EP/Pop/POP/Single/EP", 
+    "country" : "中国", 
+    "language" : "华语", 
+    "poster" : "https://img1.doubanio.com/spic/s29200309.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/I%20Don%27t%20Konw%20.mp3", 
+    "year" : "2016-12-16", 
+    "score" : "6.7", 
+    "starScore" : "35", 
+    "stars5" : NumberInt(19), 
+    "stars4" : NumberInt(59), 
+    "stars3" : NumberInt(57), 
+    "stars2" : NumberInt(14), 
+    "stars1" : NumberInt(4), 
+    "summary" : "王詩安 / EP / 2016-12-16 / avex / CD", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-30T15:45:47.235+0000"), 
+        "createAt" : ISODate("2017-08-30T15:45:47.235+0000")
+    }, 
+    "pv" : NumberInt(153), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59a6dee1cba2ea36ecd96034"), 
+    "title" : "オレンジ", 
+    "author" : "7!!", 
+    "genres" : "7!!/ACG/日本/2015/J-Pop/Anime/アニメ/OST", 
+    "country" : "日本", 
+    "language" : "日语", 
+    "poster" : "https://img3.doubanio.com/spic/s27983185.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/%E3%82%AA%E3%83%AC%E3%83%B3%E3%82%B8.mp3", 
+    "year" : "2015-02-11", 
+    "score" : "8.6", 
+    "starScore" : "45", 
+    "stars5" : NumberInt(107), 
+    "stars4" : NumberInt(73), 
+    "stars3" : NumberInt(17), 
+    "stars2" : NumberInt(1), 
+    "stars1" : NumberInt(2), 
+    "summary" : "7!! / 单曲 / 2015-02-11 / エピックレコードジャパン", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-30T15:50:57.217+0000"), 
+        "createAt" : ISODate("2017-08-30T15:50:57.217+0000")
+    }, 
+    "pv" : NumberInt(200), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59a6e031cba2ea36ecd96035"), 
+    "title" : "愛の言葉", 
+    "author" : "7!!", 
+    "genres" : "君と僕。/ACG/7!!/日本/OST/Anime/J-Pop/J-POP", 
+    "country" : "日本", 
+    "language" : "日语", 
+    "poster" : "https://img3.doubanio.com/spic/s6955286.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/%E6%84%9B%E3%81%AE%E8%A8%80%E8%91%89.mp3", 
+    "year" : "2011-11-02", 
+    "score" : "8.8", 
+    "starScore" : "45", 
+    "stars5" : NumberInt(655), 
+    "stars4" : NumberInt(497), 
+    "stars3" : NumberInt(73), 
+    "stars2" : NumberInt(4), 
+    "stars1" : NumberInt(3), 
+    "summary" : "7!! / Single / Limited Edition / 2011-11-02 / ERJ / CD", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-30T15:56:33.027+0000"), 
+        "createAt" : ISODate("2017-08-30T15:56:33.027+0000")
+    }, 
+    "pv" : NumberInt(1232), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59a9802985124c66f01f344f"), 
+    "title" : "告白气球", 
+    "author" : "周杰伦", 
+    "genres" : "周杰伦/因为他是周杰伦/周杰伦的床边故事/2016/华语/每年只等周杰伦专辑/流行/周杰倫", 
+    "country" : "中国", 
+    "language" : "华语", 
+    "poster" : "https://img3.doubanio.com/spic/s28836865.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83.mp3", 
+    "year" : "2016-06-24", 
+    "score" : "7.4", 
+    "starScore" : "35", 
+    "stars5" : NumberInt(6549), 
+    "stars4" : NumberInt(3595), 
+    "stars3" : NumberInt(2352), 
+    "stars2" : NumberInt(561), 
+    "stars1" : NumberInt(310), 
+    "summary" : "该曲清新随意、朗朗上口，很有周杰伦刚出道时的那些歌曲的感觉。前段充满R&B情调，描述遇上爱情的悸动；但是特别的是，副歌之后却转成浪漫“手摇歌”，让人听着听着，跟着旋律与节奏，就忍不住一起举起双手，摇动起来，像演唱会上拿着荧光棒，全场一起浪漫。方文山用气球来描述女生说很难追的小趣味，让该曲的情节更浪漫 ", 
+    "meta" : {
+        "updateAt" : ISODate("2017-09-01T15:43:37.651+0000"), 
+        "createAt" : ISODate("2017-09-01T15:43:37.651+0000")
+    }, 
+    "pv" : NumberInt(13367), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59a981b585124c66f01f3450"), 
+    "title" : "不为谁而作的歌", 
+    "author" : "林俊傑", 
+    "genres" : "林俊杰/华语/JJ/2015/流行/男歌手/新加坡/台湾", 
+    "country" : "中国", 
+    "language" : "华语", 
+    "poster" : "https://img3.doubanio.com/spic/s28378514.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/%E4%B8%8D%E4%B8%BA%E8%B0%81%E8%80%8C%E4%BD%9C%E7%9A%84%E6%AD%8C.mp3", 
+    "year" : "2015-12-25", 
+    "score" : "8.0", 
+    "starScore" : "40", 
+    "stars5" : NumberInt(1325), 
+    "stars4" : NumberInt(682), 
+    "stars3" : NumberInt(272), 
+    "stars2" : NumberInt(51), 
+    "stars1" : NumberInt(20), 
+    "summary" : "《不为谁而作的歌》经由弦乐编曲的打造，气势磅礴，真挚动人，也因为采用了“人头录音”技术，戴上耳机，有如置身浩大的音乐厅，四面环绕的音乐宛若林俊杰正在台上演唱（搜狐网评）。该歌曲主副歌各具个性又非常融合，情绪渲染力强，令人久久难忘，是十分成功的商业作品（第27届台湾金曲奖评审团评） 。在歌词方面，与林俊杰多年合作，深刻了解他音乐之路的作词人林秋离，不仅写出了林俊杰内心深处的疑惑、呐喊与感谢，也道出了他将人生献给音乐的真挚自白。搭配细腻动人的旋律，《不为谁而作的歌》更像是因身边每一个人而写的歌，唱出人心底的声音。", 
+    "meta" : {
+        "updateAt" : ISODate("2017-09-01T15:50:13.289+0000"), 
+        "createAt" : ISODate("2017-09-01T15:50:13.289+0000")
+    }, 
+    "pv" : NumberInt(2351), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59a9822385124c66f01f3451"), 
+    "title" : "下完这场雨", 
+    "author" : "后弦", 
+    "genres" : "后弦/中国风/怀旧/单曲/流行/送别/内地/2016", 
+    "country" : "中国", 
+    "language" : "华语", 
+    "poster" : "https://img3.doubanio.com/spic/s29093635.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/%E4%B8%8B%E5%AE%8C%E8%BF%99%E5%9C%BA%E9%9B%A8.mp3", 
+    "year" : "2016-10-10", 
+    "score" : "6.6", 
+    "starScore" : "35", 
+    "stars5" : NumberInt(46), 
+    "stars4" : NumberInt(37), 
+    "stars3" : NumberInt(26), 
+    "stars2" : NumberInt(8), 
+    "stars1" : NumberInt(4), 
+    "summary" : "《下完这场雨》作为时隔两年推出的第七张创作专辑，后弦表示7在音调里是承前启后的数字，所以把第七张专辑视为自己不忘初心回归弦式音乐的一个最好证明。当被问到与第一张专辑《古·玩》做比较时，他表示自己始终坚持“要做个音乐匠人”这一理念，所以《下完这场雨》这张专辑可谓是后弦秉着全程所有细节全创作的决心而诞生的诚心之作。", 
+    "meta" : {
+        "updateAt" : ISODate("2017-09-01T15:52:03.168+0000"), 
+        "createAt" : ISODate("2017-09-01T15:52:03.168+0000")
+    }, 
+    "pv" : NumberInt(122), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59a9842385124c66f01f3453"), 
+    "title" : "魔鬼中的天使", 
+    "author" : "田馥甄", 
+    "genres" : "田馥甄/Live/台湾/hebe/女声/华语/2012/Pop", 
+    "country" : "中国", 
+    "language" : "华语", 
+    "poster" : "http://ovgfojkvh.bkt.clouddn.com/%E9%AD%94%E9%AC%BC%E4%B8%AD%E7%9A%84%E5%A4%A9%E4%BD%BF.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/%E9%AD%94%E9%AC%BC%E4%B8%AD%E7%9A%84%E5%A4%A9%E4%BD%BF.mp3", 
+    "year" : "2012-01-20", 
+    "score" : "8.4", 
+    "starScore" : "40", 
+    "stars5" : NumberInt(2943), 
+    "stars4" : NumberInt(2432), 
+    "stars3" : NumberInt(795), 
+    "stars2" : NumberInt(88), 
+    "stars1" : NumberInt(59), 
+    "summary" : "这首歌曲由陈小霞作曲、姚若龙作词，两人已经合作过很多次，所以这首歌正如陈小霞与姚若龙的名字合在一起打造出的其他歌曲一样，歌词和旋律，都能称之为上等，而田馥甄也是首次演唱他们两人合手打造的歌曲。这首抒情歌曲唱出女生深陷爱情中，明知爱已不在却又无法狠下决心放手的纠结，这首歌曲歌词雅俗共赏，旋律琅琅上口，是田馥甄传唱面最广的一首歌曲。", 
+    "meta" : {
+        "updateAt" : ISODate("2017-09-01T16:00:35.666+0000"), 
+        "createAt" : ISODate("2017-09-01T16:00:35.666+0000")
+    }, 
+    "pv" : NumberInt(6317), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ae529a0089e225a5a6dfe5"), 
+    "title" : "致姗姗来迟的你", 
+    "author" : "阿肆", 
+    "genres" : "阿肆/民谣/女声/内地/2016/华语/中国/独立", 
+    "country" : "中国", 
+    "language" : "华语", 
+    "poster" : "https://img3.doubanio.com/spic/s29114576.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/%E8%87%B4%E5%A7%97%E5%A7%97%E6%9D%A5%E8%BF%9F%E7%9A%84%E4%BD%A0.mp3", 
+    "year" : "2016-10-25", 
+    "score" : "6.9", 
+    "starScore" : "35", 
+    "stars5" : NumberInt(207), 
+    "stars4" : NumberInt(437), 
+    "stars3" : NumberInt(443), 
+    "stars2" : NumberInt(83), 
+    "stars1" : NumberInt(25), 
+    "summary" : "《致姗姗来迟的你》，一个文学化的名字，乍听起来，就像一篇书信体短篇小说。整首歌清爽明快的基调同步于爱情观的转变，而林宥嘉的完美献声，同样使“治愈系”的阿肆不再留给听众“致郁”的后遗症。这样一份笃定从容的心态，被描摹得无比真切而美好。从自我出发，阿肆又一次完成了对都市情感生活的妙手诊断，更遇到了音乐中那个“对的人”。", 
+    "meta" : {
+        "updateAt" : ISODate("2017-09-05T07:30:34.328+0000"), 
+        "createAt" : ISODate("2017-09-05T07:30:34.328+0000")
+    }, 
+    "pv" : NumberInt(1195), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ae53a17b228ace1000aac2"), 
+    "title" : "认真的雪", 
+    "author" : "薛之谦", 
+    "genres" : "薛之谦/内地/认真的雪/流行/Pop/华语/华人男歌手/大陆", 
+    "country" : "中国", 
+    "language" : "华语", 
+    "poster" : "https://img1.doubanio.com/spic/s2174238.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/%E8%AE%A4%E7%9C%9F%E7%9A%84%E9%9B%AA.mp3", 
+    "year" : "2006", 
+    "score" : "7.2", 
+    "starScore" : "35", 
+    "stars5" : NumberInt(186), 
+    "stars4" : NumberInt(284), 
+    "stars3" : NumberInt(311), 
+    "stars2" : NumberInt(20), 
+    "stars1" : NumberInt(9), 
+    "summary" : "《认真的雪》把薛之谦的创作才华发挥得淋漓尽致，是“薛式情歌”的代表作品之一。中式R&B曲风之中记录了2005年上海的一场仿佛因为预知“离别”而“认真”的下起的大雪。歌词中“爱得那么认真、雪下得那么深、倒映出我淌在雪中的伤痕”写出了薛之谦对爱情的执着和伤怀。虽然薛之谦坦言这段感情已是过去，但每次演绎起来还是特别用心。", 
+    "meta" : {
+        "updateAt" : ISODate("2017-09-05T07:34:57.732+0000"), 
+        "createAt" : ISODate("2017-09-05T07:34:57.732+0000")
+    }, 
+    "pv" : NumberInt(810), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ae543e7b228ace1000aac3"), 
+    "title" : "被驯服的象", 
+    "author" : "蔡健雅", 
+    "genres" : "蔡健雅/2013/华语/Pop/台湾/女声/新加坡/流行", 
+    "country" : "中国", 
+    "language" : "华语", 
+    "poster" : "https://img3.doubanio.com/spic/s27050134.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/%E8%A2%AB%E9%A9%AF%E6%9C%8D%E7%9A%84%E8%B1%A1.mp3", 
+    "year" : "2013-09-24", 
+    "score" : "7.6", 
+    "starScore" : "40", 
+    "stars5" : NumberInt(1015), 
+    "stars4" : NumberInt(2219), 
+    "stars3" : NumberInt(1310), 
+    "stars2" : NumberInt(121), 
+    "stars1" : NumberInt(17), 
+    "summary" : "《被驯服的象》的歌词颇为犀利，这是一首关乎人性与社会的歌曲，毫不客气的揭示了人类生存的一种常态，为了融入社会而变得面目全非，若要掌声只要你愿当被驯服的象，想要被崇拜先要抛弃自尊。编曲在华丽如马戏团般的气氛中，却始终有一个听来不太和谐的钢琴节奏制造出一种暗藏危机的压迫感。这也正暗合着歌词中有点悲凉的演艺圈生态。 歌者在迷雾中努力寻求真我，走向正途的决心也表露无遗，充满了人文色彩。曲子节奏感强劲，虽是朗朗上口的旋律，却不感觉明快轻松，背景乐的钢琴声给人以迫近感，与歌词的意境融合得恰到好处。其实掌声和荣耀不过是欲望和虚荣的表演，回归真实的自己才是内心深处的呐喊", 
+    "meta" : {
+        "updateAt" : ISODate("2017-09-05T07:37:34.817+0000"), 
+        "createAt" : ISODate("2017-09-05T07:37:34.817+0000")
+    }, 
+    "pv" : NumberInt(4682), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ae56237b228ace1000aac4"), 
+    "title" : "甜甜的", 
+    "author" : "周杰伦", 
+    "genres" : "周杰伦/我很忙/台湾/Jay/Pop/流行/2007/牛仔很忙", 
+    "country" : "中国", 
+    "language" : "华语", 
+    "poster" : "http://ovgfojkvh.bkt.clouddn.com/%E5%91%A8%E6%9D%B0%E4%BC%A6.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/%E7%94%9C%E7%94%9C%E7%9A%84.mp3", 
+    "year" : "2007-11-01", 
+    "score" : "7.3", 
+    "starScore" : "35", 
+    "stars5" : NumberInt(8631), 
+    "stars4" : NumberInt(13229), 
+    "stars3" : NumberInt(11620), 
+    "stars2" : NumberInt(1556), 
+    "stars1" : NumberInt(336), 
+    "summary" : "《甜甜的》虽然是一首粉色系的作品，但是周杰伦对于可爱的尺度都还控制在一个范围之内，《甜甜的》这首歌比周杰伦一般可爱的歌更多点俏皮，没有过多的前奏，一开头就唱出来，直接涌现甜甜的味道。《甜甜的》与《阳光宅男》刚好一刚一柔成为摇滚风格的两个呼应篇，但歌曲不时出现的一句“哦”的叫喊效果听起来很不舒服。", 
+    "meta" : {
+        "updateAt" : ISODate("2017-09-05T07:45:39.124+0000"), 
+        "createAt" : ISODate("2017-09-05T07:45:39.124+0000")
+    }, 
+    "pv" : NumberInt(35373), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ae589900c607298d5b60a0"), 
+    "title" : "最长的电影", 
+    "author" : "周杰伦", 
+    "genres" : "周杰伦/我很忙/台湾/Jay/Pop/流行/2007/牛仔很忙", 
+    "country" : "中国", 
+    "language" : "华语", 
+    "poster" : "http://ovgfojkvh.bkt.clouddn.com/%E5%91%A8%E6%9D%B0%E4%BC%A6.jpg", 
+    "address" : "http://ovgfojkvh.bkt.clouddn.com/%E6%9C%80%E9%95%BF%E7%9A%84%E7%94%B5%E5%BD%B1%20-%20%E5%91%A8%E6%9D%B0%E4%BC%A6.mp3", 
+    "year" : "2007-11-01", 
+    "score" : "7.3", 
+    "starScore" : "35", 
+    "stars5" : NumberInt(8631), 
+    "stars4" : NumberInt(13229), 
+    "stars3" : NumberInt(11620), 
+    "stars2" : NumberInt(1556), 
+    "stars1" : NumberInt(336), 
+    "summary" : "《最长的电影》依旧是典型的周氏情歌，不过周杰伦的咬字却越来越清晰 。周杰伦选择这首歌来填词，只能理解为谦虚、低调。钢琴忧郁，鼓点重击出悲伤情歌的韵尾，周杰伦的唱腔痛苦万状。《我很忙》大多数单曲风格轻快，最后猛然出现的这首慢歌让人有点窝心", 
+    "meta" : {
+        "updateAt" : ISODate("2017-09-05T07:56:09.648+0000"), 
+        "createAt" : ISODate("2017-09-05T07:56:09.648+0000")
+    }, 
+    "pv" : NumberInt(35353), 
+    "__v" : NumberInt(0)
+}

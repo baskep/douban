@@ -63,7 +63,6 @@ function loadCategoryMovieData(len, result) {
 	$('.list-wp .list').append(htmlEle);
 }
 
-
 // 加载更多电影
 function loadMore(skip, item) {
 	var sort = $("input[name='sort']:checked").val();

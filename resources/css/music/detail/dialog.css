@@ -1,0 +1,89 @@
+
+.dui-dialog {
+    position: fixed;
+    z-index: 1000;
+}
+.dui-dialog .dui-dialog-content {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    position: relative;
+    z-index: 2;
+}
+.dui-dialog .hd {
+    background: #ebf5eb none repeat scroll 0 0;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+    padding: 10px 10px 6px;
+}
+.dui-dialog .hd h3 {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #060;
+    padding: 0 40px 0 4px;
+}
+.dui-dialog .hd h3 i {
+    color: #060;
+    font-style: normal;
+    margin-left: 0.5ex;
+}
+.dui-dialog .bd {
+    font-size: 12px;
+    padding: 15px;
+    position: relative;
+}
+.dui-dialog .bd::after {
+    clear: both;
+    content: " ";
+    display: block;
+}
+.dui-dialog .ft .bn-flat, .dui-dialog .ft input {
+    margin: 0 0.5em;
+}
+.dui-dialog .ft {
+    padding: 0 10px 10px;
+    text-align: center;
+}
+.dui-dialog .dui-dialog-close {
+    font: 11px/1.2 "Comic Sans MS",sans-serif;
+    padding: 0 3px;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    z-index: 1;
+}
+a.dui-dialog-close:link {
+    color: #b4b4b4;
+}
+a.dui-dialog-close:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #fab0b6;
+}
+.dui-dialog .dui-dialog-shd {
+    background: #666 none repeat scroll 0 0;
+    border-radius: 5px;
+    height: 100%;
+    left: -8px;
+    opacity: 0.4;
+    padding: 8px;
+    position: absolute;
+    top: -8px;
+    width: 100%;
+}
+.dui-dialog-iframe {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    left: -8px;
+    opacity: 0;
+    position: absolute;
+    top: -8px;
+    z-index: 1;
+}
+.dui-dialog-msk {
+    background: #fff none repeat scroll 0 0;
+    left: 0;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}

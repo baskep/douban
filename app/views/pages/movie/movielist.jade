@@ -4,30 +4,117 @@ html
     meta(charset="utf-8")
     title #{title}
     include ../../includes/head
+    script(src="/js/bootstrap-paginator.js")
+    link(href="/css/common/common.css" rel="stylesheet")
   body
-    .container
-      .row
+    div.container(style="width: 100%")
+      form.form-inline.searchArea
+        div.form-group.col-xs-4.col-md-4.col-lg-4
+          label.col-xs-2.col-md-2.col-lg-2 电影名:
+          input#moviename.form-control.col-xs-10.col-md-10.col-lg-10(type="text")
+        div.form-group.col-xs-4.col-md-4.col-lg-4
+          label.col-xs-2.col-md-2.col-lg-2 主演:
+          input#casts.form-control.col-xs-10.col-md-10.col-lg-10(type="text")
+        div.form-group.col-xs-4.col-md-4.col-lg-4
+          label.col-xs-2.col-md-2.col-lg-2 国家:
+          input#country.form-control.col-xs-10.col-md-10.col-lg-10(type="text")
+      div.buttonGroup.row
+        div.col-xs-2.col-md-2.col-lg-2
+          button.btn.btn-primary(type="button" style="margin-top: 10px;" onclick="search()") 
+            span.glyphicon.glyphicon-search 查询
+      div.row
         table.table.table-hover.table-bordered
           thead
             tr
               th 电影名称
               th 导演
+              th 主演
               th 国家
               th 上映年份
               th 录入时间
-              th 查看
-              th 更新
-              th 删除
+              th 类型
+              th 豆瓣评分
+              th 操作
           tbody
             each item in movies
               tr(class="item-id-#{item._id}")
                 td #{item.title}
                 td #{item.doctor}
+                td #{item.casts}
                 td #{item.country}
                 td #{item.year}
                 td #{moment(item.meta.updateAt).format('YYYY-MM-DD HH :SS')}
-                td: a(target="_blank", href="../movie/#{item._id}") 查看
-                td: a(target="_blank", href="../updatemovie/#{item._id}") 修改
+                td #{item.genres}
+                td #{item.score} 
                 td
-                  button.btn.btn-danger.del(type="button", data-id="#{item._id}") 删除
-  script(src="/js/public.js")
+                  button.btn.btn-default(type="button" onclick="tansferDetail('#{item._id}')") 
+                    span.glyphicon.glyphicon-share-alt
+                  button.btn.btn-default(type="button" onclick="transferEdit('#{item._id}')") 
+                    span.glyphicon.glyphicon-edit 
+                  button.btn.btn-default(type="button" onclick="deleteMovie('#{item._id}')") 
+                    span.glyphicon.glyphicon-trash 
+    div
+      div(style="float: left;margin-top: 25px;")
+        span 共有 #{count} 条数据
+      div(style="float:right")
+        ul#pagination
+      div#attribute(style="display: none;" data-count="#{count}" data-currentPage="#{currentPage}")
+
+script(src="/js/public.js")
+script.
+    window.onload = function() {
+        var element = $('#pagination');
+        var options = {
+            bootstrapMajorVersion: 3,
+            currentPage: $('#attribute').attr('data-currentPage'),
+            numberOfPages: 10,
+            totalPages: Math.ceil($('#attribute').attr('data-count') / 10),
+            onPageClicked: function(event, originalEvent, type, page) {
+                turnpage(page);
+            }
+        }
+        element.bootstrapPaginator(options);
+    }
+
+    // 查询
+    function search() {
+        var currentPage = $('#attribute').attr('data-currentPage');
+        turnpage(currentPage);
+    }
+
+    // 翻页
+    function turnpage(page) {
+        var moviename = $('#moviename').val(),
+            casts = $('#casts').val(),
+            country = $('#country').val();
+        window.location.href = '/movielist?currentPage=' + page 
+                            + '&moviename=' + moviename 
+                            + '&casts=' + casts 
+                            + '&country=' + country;
+
+    }
+
+    // 跳转到详情页
+    function tansferDetail() {
+        window.location.href = "/movie/" + arguments[0];
+    }
+
+    // 跳转到修改页
+    function transferEdit() {
+        window.location.href = "/updatemovie/" + arguments[0];
+    }
+
+    // 删除电影
+    function deleteMovie() {
+        if(confirm('确认删除此电影?')) {
+            $.get('/deleteMovie', {
+                id : arguments[0]
+            }, function(result) {
+                if(result.flag === true || result.flag === 'true') {
+                    refresh();
+                } else {
+                    alert('删除失败');
+                }
+            });
+        }
+    }

@@ -1,0 +1,108 @@
+extends ../../includes/backend
+block otherStyle
+  style.
+    .default {
+      margin-top:100px;
+    }
+    #inputSummary {
+      resize:none;
+    }
+block content
+  .container.default
+    .row
+     .form-group
+        h1.col-sm-2 音乐录入
+    hr
+    .row
+      form.form-horizontal(method="post", action="/savemusic")
+        .form-group
+            label.col-sm-2.control-label(for="inputMusicDoubanId") 豆瓣音乐ID
+            .col-sm-10
+              input#inputMusicDoubanId.form-control(type="text", name="inputMusicDoubanId")
+        if music._id
+          input(type="hidden", name="music[_id]", value=music._id)
+        //- 隐藏表单域，用来更新音乐数据，存储音乐ID
+        .form-group
+          label.col-sm-2.control-label 音乐分类
+          .col-sm-10
+            each cat in musicCategories
+              label.radio-inline
+                if music.musicCategory
+                  input(type="radio", name="music[musicCategory]", value=cat._id, checked=cat._id.toString()==music.musicCategory.toString())
+                else
+                  input(type="radio", name="music[musicCategory]", value=cat._id)
+                | #{cat.name}
+        .form-group
+          label.col-sm-2.control-label(for="inputTitle") 音乐名称
+          .col-sm-10
+            input#inputTitle.form-control(type="text", name="music[title]", value=music.title)
+        .form-group
+          label.col-sm-2.control-label(for="inputAuthor") 音乐作者
+          .col-sm-10
+            input#inputAuthor.form-control(type="text", name="music[author]", value=music.author)
+        .form-group
+          label.col-sm-2.control-label(for="inputGenres") 音乐标签
+          .col-sm-10
+            input#inputGenres.form-control(type="text", name="music[genres]", value=music.genres)
+        .form-group
+          label.col-sm-2.control-label(for="inputCountry") 国家
+          .col-sm-10
+            input#inputCountry.form-control(type="text", name="music[country]", value=music.country)
+        .form-group
+          label.col-sm-2.control-label(for="inputLanguage") 语言
+          .col-sm-10
+            input#inputLanguage.form-control(type="text", name="music[language]", value=music.language)
+        .form-group
+          label.col-sm-2.control-label(for="inputPoster") 海报地址
+          .col-sm-10
+            input#inputPoster.form-control(type="text", name="music[poster]", value=music.poster)
+        .form-group
+          label.col-sm-2.control-label(for="inputAddress") 音源地址
+          .col-sm-10
+            input#inputAddress.form-control(type="text", name="music[address]", value=music.address)
+        .form-group
+          label.col-sm-2.control-label(for="inputYear") 发行年代
+          .col-sm-10
+            input#inputYear.form-control(type="text", name="music[year]", value=music.year)
+        .form-group
+          label.col-sm-2.control-label(for="inputPv") 访问量
+          .col-sm-10
+            input#inputPv.form-control(type="text", name="music[pv]", value=music.pv)
+        .form-group
+          label.col-sm-2.control-label(for="inputSource") 豆瓣评分
+          .col-sm-10
+            input#inputSource.form-control(type="text", name="music[score]", value=music.score)
+        .form-group
+          label.col-sm-2.control-label(for="inputStarScore") 豆瓣星级
+          .col-sm-10
+            input#inputStarScore.form-control(type="text", name="music[starScore]", value=music.starScore)
+
+        .form-group
+          label.col-sm-2.control-label(for="inputStars5") 五星人数
+          .col-sm-10
+            input#inputStars5.form-control(type="text", name="music[stars5]", value=music.stars5)
+        .form-group
+          label.col-sm-2.control-label(for="inputStars4") 四星人数
+          .col-sm-10
+            input#inputStars4.form-control(type="text", name="music[stars4]", value=music.stars4)
+        .form-group
+          label.col-sm-2.control-label(for="inputStars3") 三星人数
+          .col-sm-10
+            input#inputStars3.form-control(type="text", name="music[stars3]", value=music.stars3)
+        .form-group
+          label.col-sm-2.control-label(for="inputStars2") 二星人数
+          .col-sm-10
+            input#inputStars2.form-control(type="text", name="music[stars2]", value=music.stars2)
+        .form-group
+          label.col-sm-2.control-label(for="inputStars1") 一星人数
+          .col-sm-10
+            input#inputStars1.form-control(type="text", name="music[stars1]", value=music.stars1)
+                
+        .form-group
+          label.col-sm-2.control-label(for="inputSummary") 音乐简介
+          .col-sm-10
+            textarea#inputSummary.form-control(type="text", name="music[summary]", rows=8, value=music.summary)
+        .form-group
+          .col-sm-10
+          button.btn.btn-default(type="submit") 录入
+  script(src="/js/public.js")

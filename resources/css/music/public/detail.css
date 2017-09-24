@@ -1,0 +1,142 @@
+
+.mobile-app-entrance {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.mobile-app-entrance .entrance-link {
+    border-radius: 5px;
+    display: block;
+    height: 50px;
+    margin-top: 10px;
+    padding: 10px;
+    position: relative;
+}
+.mobile-app-entrance .entrance-link.first-link {
+    margin-top: 0;
+}
+.mobile-app-entrance .entrance-link, .mobile-app-entrance .entrance-link:link, .mobile-app-entrance .entrance-link:visited, .mobile-app-entrance .entrance-link:active, .mobile-app-entrance .entrance-link:hover {
+    background: #f1f1f1 url("https://img3.doubanio.com/f/shire/0003218ce76cc146b4edd500d3825da1b0c9d410/pics/app/arrw.png") no-repeat scroll 97% 50%;
+    color: #4e4e4e;
+    outline: medium none;
+}
+.mobile-app-entrance .app-icon {
+    background: rgba(0, 0, 0, 0) url("https://img3.doubanio.com/f/shire/76e762a8ca7a92cfd4afc3512d47f9e6f8a83706/pics/app/app_icons_50_8.jpg") no-repeat scroll 0 0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px #999;
+    float: left;
+    height: 50px;
+    margin-right: 13px;
+    width: 50px;
+}
+.mobile-app-entrance .main-title, .mobile-app-entrance .sub-title {
+    display: block;
+}
+.mobile-app-entrance .main-title {
+    color: #204d92;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    padding-top: 9px;
+}
+.mobile-app-entrance .app-list {
+    background: #f1f1f1 none repeat scroll 0 0;
+    font-size: 0;
+    padding: 14px 21px 8px;
+}
+.mobile-app-entrance .app-list .app-item {
+    display: inline-block;
+    margin-right: 25px;
+    width: 50px;
+}
+.mobile-app-entrance .app-item .app-link {
+    color: #4e4e4e;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+.mobile-app-entrance .app-item .app-link:hover {
+    background: transparent none repeat scroll 0 0;
+    color: #4e4e4e;
+}
+.mobile-app-entrance .app-item .app-icon {
+    display: block;
+    float: none;
+    margin: 0 0 8px;
+}
+.mobile-app-entrance.app-main .entrance-link {
+    background-image: none;
+    border-radius: 0;
+    height: 50px;
+    padding: 15px 15px 15px 21px;
+}
+.mobile-app-entrance.app-main .main-title {
+    font-size: 18px;
+    padding-top: 10px;
+}
+.mobile-app-entrance.app-main .sub-title {
+    font-size: 14px;
+}
+.mobile-app-entrance.app-main .app-icon {
+    background: rgba(0, 0, 0, 0) url("/f/shire/c580641d673b1ce48cc79a3039ee8474ced89122/pics/app/mobile_app_icon1.png") no-repeat scroll 0 0;
+    border-radius: 0;
+    box-shadow: none;
+    float: right;
+    height: 50px;
+    width: 62px;
+}
+.mobile-app-entrance.app-update {
+    margin-top: 20px;
+}
+.mobile-app-entrance.app-movie {
+    margin-top: 20px;
+}
+.mobile-app-entrance.app-music {
+    margin-top: 20px;
+}
+.mobile-app-entrance.app-artist {
+    margin: -20px 0 20px 50px;
+    width: 200px;
+}
+#artist-link {
+    background: #f1f1f1 none repeat scroll 0 0;
+    padding: 10px 5px;
+}
+#artist-link .app-icon {
+    margin-right: 5px;
+}
+#artist-link .main-title {
+    font-size: 14px;
+}
+.mobile-app-entrance .app-icon.icon-read {
+    background-position: 0 0;
+}
+.mobile-app-entrance .app-icon.icon-update {
+    background-position: -150px 0;
+}
+.mobile-app-entrance .app-icon.icon-fm {
+    background-position: -250px 0;
+}
+.mobile-app-entrance .app-icon.icon-fm-ipad {
+    background-position: -300px 0;
+}
+.mobile-app-entrance .app-icon.icon-movie {
+    background-position: -350px 0;
+}
+.mobile-app-entrance .app-icon.icon-artists {
+    background-position: -50px center;
+}
+.mobile-app-entrance .app-icon.icon-cart {
+    background-position: -200px 0;
+}
+.mobile-app-entrance .app-icon.icon-location {
+    background-position: -100px 0;
+}
+.mobile-app-entrance .app-icon.icon-read-notes {
+    background-position: -400px 0;
+}
+.mobile-app-entrance .app-icon.icon-online {
+    background-position: -450px 0;
+}
+.mobile-app-entrance .app-icon.icon-group {
+    background-position: -500px 0;
+}

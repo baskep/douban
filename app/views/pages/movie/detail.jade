@@ -7,14 +7,29 @@ block otherStyle
   link(href="/css/movie/detail/detail_2.css", rel="stylesheet")
   link(href="/css/movie/detail/setting_standalone.css", rel="stylesheet")
   link(href="/css/movie/detail/style.min.css", rel="stylesheet")
-  link(href="/css/movie/detail/test.css", rel="stylesheet")
+  link(href="/css/movie/detail/Bootstrap.css", rel="stylesheet")
   style.
     .defaul-color {
         color: #37a;
     }
     .grid-16-8 .aside {
-        float: right;
+        position: relative;
         width: 510px;
+        left: 50px;
+        z-index: 10001;
+    }
+    #drag-box {
+        height: 50px;
+        width: 100%;
+        box-shadow: 0 0 5px #8888;
+        text-align: center;
+    }
+    #drag-box:hover {
+        cursor: move;
+    }
+    .a_collect_btn img {
+        width: 16px;
+        height: 16px;
     }
 block content
     div#wrapper(style="width:1150px;margin-top:40px")
@@ -72,12 +87,30 @@ block content
                       div.rating_right
                         div.bigstar.ll
                           span.starScore(style="display:none") #{movie.starScore}
+                        div.rating_sum
+                          span ( #{movie.pv} 评价 )
+                    div.ratings-on-weight
             div.related-info(style="margin-bottom:-10px;")
               h2
-                i 你的名字。 剧情简介· · · · · · 
+                i #{movie.title} 剧情简介· · · · · · 
               div.indent#link-report
                 span &nbsp;&nbsp;&nbsp;&nbsp;#{movie.summary}
                 br
+            div
+              评价: 
+              span.rating
+                span#stars
+                  a.j.a_collect_btn
+                    img#star1(src="/images/star.png" data-count="1" title="很差")
+                  a.j.a_collect_btn
+                    img#star1(src="/images/star.png" data-count="2" title="较差")
+                  a.j.a_collect_btn
+                    img#star1(src="/images/star.png" data-count="3" title="还行")
+                  a.j.a_collect_btn
+                    img#star1(src="/images/star.png" data-count="4" title="推荐")
+                  a.j.a_collect_btn
+                    img#star1(src="/images/star.png" data-count="5" title="力荐")
+                span#rateword.pl
               .panel.panel-defatul
                 .panel-heading
                   h3 评论区
@@ -103,67 +136,207 @@ block content
                                   p.media-heading
                                     span.text-info &nbsp;回复: &nbsp;
                                     | #{reply.from.username}
-                                    
                                   p #{reply.content}
               #comments
                 form#commentForm(method="POST", action="/comment")
-                  input(type="hidden", name="comment[movie]", value="#{movie._id}")
+                  input(type="hidden", name="comment[movie]", id="movieID" value="#{movie._id}")
                   if user
                     input(type="hidden", name="comment[from]", value="#{user._id}")
                   .form-group
-                    textarea.form-control.commentArea(name="comment[content]", style="height:120px;overflow:hidden;resize:none")
+                    textarea.form-control.commentArea(name="comment[content]", style="height:120px;overflow:hidden;resize:none;width:95%")
                   if user
                     button.btn.btn-primary(type='submit') 提交
                   else
                     a.navbar-link(href="/getLoginPage", ) 登录后评论
-          div.aside(stlye="position: static; left: 924.6px;")
-            div(style="height:350px;width:100%;")
+          div.aside#vedio(stlye="position: static; left: 924.6px;")
+            div#drag-box
+                img(src="/images/drag.png" style="height: 100%;")
+            div#flash(style="height:350px;width:100%;")
               embed(src="#{movie.flash}", allowFullScreen="true", quality="high", width="100%", height="100%", align="middle", type="application/x-shockwave-flash")
       include ../../includes/footer
 block srcipts  
   script.
+    var params = {
+            left: 0,
+            top: 0,
+            currentX: 0,
+            currentY: 0,
+            flag: false,
+            musictDuration: 0
+        };
+
+        window.onload = function() {
+            var content = document.getElementById("vedio");
+            startDrag(content);
+        }
+
+        //获取相关CSS属性
+        function getCss(o, key) {
+            return o.currentStyle ? o.currentStyle[key] : document.defaultView.getComputedStyle(o, false)[key];
+        };
+
+        //拖拽的实现
+        var startDrag = function(target) {
+            var dragBox = document.getElementById('drag-box'); // 获得拖动条的引用
+
+            // 获取目标元素的left、top属性值
+            if (getCss(target, "left") !== "auto") {
+                params.left = getCss(target, "left");
+            }
+                if (getCss(target, "top") !== "auto") {
+                params.top = getCss(target, "top");
+            }
+
+            dragBox.onmousedown = function(event) {
+
+            // 当鼠标按下时表示元素可以移动，将标记设为true;
+            params.flag = true;
+
+            if (event.preventDefault) {
+                event.preventDefault();
+            }else {
+                event.returnValue = false;
+            }
+
+            var e = event;
+            params.currentX = e.clientX;
+            params.currentY = e.clientY;
+            };
+
+            dragBox.onmouseup = function() {
+                // 当鼠标松开时将标记设为false，表示不可移动
+                params.flag = false;
+                // 当鼠标松开时再次更新元素的位置
+                if (getCss(target, "left") !== "auto") {
+                    params.left = getCss(target, "left");
+                }
+                if (getCss(target, "top") !== "auto") {
+                    params.top = getCss(target, "top");
+                }
+            };
+
+            dragBox.onmousemove = function(event) {
+                var e = event ? event : window.event;
+                // 获取到当前鼠标的位置
+                if (params.flag) {  
+                    var nowX = e.clientX,
+                        nowY = e.clientY;
+                    var disX = nowX - params.currentX,
+                        disY = nowY - params.currentY;
+                    // 将元素的位置更新，parsenInt为了将属性值变为数字类型
+                    target.style.left = parseInt(params.left) + disX + "px";
+                    target.style.top = parseInt(params.top) + disY + "px";
+                    }
+                }
+            };
+
     $(function() {  
-      var starScores = $('#interest_sectl .bigstar');
-      var ratingstars = $('#interest_sectl .bigstar .starScore').text();
-      $(starScores).addClass('bigstar' + ratingstars);
+        var starScores = $('#interest_sectl .bigstar');
+        var ratingstars = $('#interest_sectl .bigstar .starScore').text();
+        $(starScores).addClass('bigstar' + ratingstars);
 
-      $('.comment').click(function(e){
-        var target = $(this);
-        var cid = target.data('cid');
-        var tid = target.data('tid');
-        var cname = target.data('cname');
-        if($('#tid').length === 0) {
-          $('<input>').attr({
-            type : 'hidden',
-            id : 'tid',
-            name : 'comment[tid]',
-            value : tid
-          }).appendTo('#commentForm');
-        } else {
-          $('#tid').val(tid);
-        }
+        $('.comment').click(function(e){
+            var target = $(this);
+            var cid = target.data('cid');
+            var tid = target.data('tid');
+            var cname = target.data('cname');
+            if($('#tid').length === 0) {
+                $('<input>').attr({
+                    type : 'hidden',
+                    id : 'tid',
+                    name : 'comment[tid]',
+                    value : tid
+                }).appendTo('#commentForm');
+            } else {
+                $('#tid').val(tid);
+            }
 
-        if($('#cid').length === 0) {
-          $('<input>').attr({
-            type : 'hidden',
-            id : 'cid',
-            name : 'comment[cid]',
-            value : cid
-          }).appendTo('#commentForm');
-        } else {
-          $('#cid').val(cid);
+            if($('#cid').length === 0) {
+                $('<input>').attr({
+                    type : 'hidden',
+                    id : 'cid',
+                    name : 'comment[cid]',
+                    value : cid
+                }).appendTo('#commentForm');
+            } else {
+                $('#cid').val(cid);
         }
-        $('.commentArea').attr('placeholder','回复 ' + cname);
+            $('.commentArea').attr('placeholder','回复 ' + cname);
+    });
+
+        // 电影ID
+        var movieID = $('#movieID').val();
+
+        // 获得各个等级的评价
+        $.get('/getEvaluation', {
+            id: movieID
+        },function(result) {
+            var percent = 0, // 计算每个星级所占的百分比
+                percentStr = '', // 保存的百分比
+                personCount = 0, // 保存每个星级打分的人数
+                currentStar = '', // 访问各个星级的人数
+                pv = 0, // 保存所有评分人数
+                htmlEle = '' // DOM字符串
+
+            pv = result.movie.pv;
+            for(var i = 5; i >= 1; i--) {
+                currentStar = 'stars' + i;
+                percent = ((result.movie[currentStar] / pv) * 100).toFixed(1);
+                percentStr = percent + '%';
+                htmlEle += '<div class="item">'
+                        +       '<span class="' + currentStar +' starstop' + '">'
+                        +           i + '星'
+                        +       '</span>'
+                        +       '<div class="power" style="width:' + Math.round(percent*120 / 100) + 'px">'
+                        +       '</div>'
+                        +       '<span class="rating_per">'
+                        +           percentStr
+                        +       '</span>'
+                        +   '</div>';
+            }
+            $('.ratings-on-weight').append(htmlEle);
       });
+
+        $('.a_collect_btn img').hover(function() {
+
+            var count = $(this).attr('data-count');
+            var text = $(this).attr('title');
+            var imgList = $('.a_collect_btn img');
+
+            $('#rateword').text(text);
+            for(var i = 0; i < count; i ++) {
+                $(imgList[i]).attr('src','/images/hover_star.png');
+            }
+        });
+
+        $('.a_collect_btn img').mouseout(function() {
+
+            $('#rateword').text('');
+            var imgList = $('.a_collect_btn img');
+
+            for(var i = 0, len = imgList.length; i < len; i ++) {
+                $(imgList[i]).attr('src','/images/star.png');
+            }
+        });
+
+        $('.a_collect_btn img').click(function() {
+            var count = $(this).attr('data-count');
+            if(confirm('确定评价?')) {
+                $.get('/evaluateMovie', {
+                    movieID: movieID,
+                    count: count
+                }, function(result) {
+
+                });
+            } 
+        });
     });
 
     // 注销登录
     function logout() {
-      $.get('/logout', function(result) {
-      if(result.flag === true || result.flag === 'true') {
-          window.location.reload();
-        }
-      });
+        $.get('/logout', function(result) {
+        if(result.flag === true || result.flag === 'true') {
+            window.location.reload();
+            }
+        });
     }
-
-

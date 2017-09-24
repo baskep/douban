@@ -1,0 +1,58 @@
+extends ../../includes/musciFront
+block otherStyle
+	link(href="/css/movie/public/_all.css", rel="stylesheet")
+	link(href="/css/movie/public/reg_login_pop.css", rel="stylesheet")
+	link(href="/css/movie/moreMovie/init.css" rel="stylesheet")
+	style.
+		.cover-wp img {
+			width: 128px;
+			height: 180px;
+		}
+block content
+	div#wrapper
+		div#content
+			div
+				h1 选音乐
+				div.grid-16-8.clearfix
+					div.article
+						div.gaia
+							div.fliter-wp
+								div.filter
+									div.tags
+										div.tag-list
+											if musicCategories && musicCategories.length > 0
+												each item in musicCategories
+													label.category #{item.name}
+									div.tool
+										div.sort
+											label
+												input(name="sort" value="pv" checked="checked" type="radio")
+												span 按热度排序
+											label
+												input(name="sort" value="year" type="radio")
+												span 按时间排序
+											label
+												input(name="sort" value="genres" type="radio")
+												span 按评价排序
+								div.list-wp
+									div.list
+									a.more(href="javascript:;" data-skip="8") 加载更多
+					div.aside
+						div#dale_movie_home_top_right.s(style="margin-top:45px;")
+							div(style="position: relative; margin: 0px 0px 20px; display: block; width: 300px; height: 250px;")
+								div(style=" display: inline-block;font-size: 0;overflow: hidden;position: relative;")
+									a(href="https://dsp-click.youdao.com/clk/request.s?slot=c47bd192991f89205fc67b4e77bcf4dc&k=rN8JajSac3rfmIxFxFtCbqQVuptz8043d38pcwnwXTrXxo%2BoRxcJpjjAgKuViCqvrwou2TfNvjWvGgTc0iLuVZfYFFeZg3eM25xLB%2BCPWS%2BY0W4lI4GwA5wOPzFt%2Fj4hbdKXU4JsicQSeSGD41T6kOAF71SO8NPFf5YPo%2Biuyxpmz8D8U25Sm23LkBI5Za22ESRnfiHpUwuW4fqdJr3rCAF6WlaBCKgBQ93GA03Q9jXjlMayTD7q40mO0oImWkmThbQo7lqhOe%2BMzhMcNsyk1d15drqiCQggwa0ywWdPDFUibE1HTH%2BxZDdkjjKGm8fhuCYjDzYQTWPBA1zsxUBSB%2FNRtHIcJUXqh52mvXObecfLIT0hNqlmCfRli18Ni%2B8PrkUQt%2Fhvp13rj2FI9PRbON%2BKgGDHnZ2CEms9dQTpT07wYnk11ucgK34Engw2Ug3F5Eih2wbwpXKy9iHMX%2FEa%2FQpNzrRggKcJXm%2BeG0ZGKGI%2Fo5ArGSTE4u0W62MrE2E%2FSLnMBL%2FD4vZNJV09hOG2EzO%2FwhJomVStmaU%2BKV3iC0KTv%2F6telm7X0v%2BymUdDFQywozLrfCCKbhBdcF78lwd1c%2FoTPbmZzkMAqcbowNicycfCKfrkRHO7q%2Fy3D0cRpqzDwqad0LgsCVEmKP6SOVY55L7BY3PIcU8rU9p5fXh8hWHAMlPk0CR5LurPeZyj8tkuRirMIDqYzf9FlMQDdUt85eQg%2FNc5ETSnNar7ojVsjfSGy8cKVaZ8igLbUotCih7ad%2FjTX6pgp2Q23CRjDEbBvWYtxJ2aR5lJPeW18lmCKTUhtYB0fdx3fA4yy%2FqOju575uOJWAuOaldFRGOKfJENEfaSEIVvvXPf93JSwimE0FrcM2riKveQUzcDaPvewTzfJz7GugQNSvhU%2FKBgYje8nyv0DaSezLMECtfxNJ1z0NCHEDbDHz6zTx%2Fy3XqU9Dt72pN4KAORzW0Ot42SUEaE8davyA2g7Z%2FK3YpH9eA%2FkvXxo%2BoRxcJpjjAgKuViCqv18aPqEcXCaY4wICrlYgqrx1luQtQByAlqNdS9r5BclY%3D&youdao_bid=a361d556-dffa-4d3f-874f-a5b8d0efc079&youdao_deviceId=b7db5c9a5b64374aae12583ea97fc2fa" target="_blank")
+										img(src="https://oimageb4.ydstatic.com/image?id=7131035964084245875&product=adpublish&w=300&h=250")
+								div(style="line-height: 1; text-align: center; background-color: rgba(0, 0, 0, 0.3); font-size: 12px; position: absolute; right: 0px; bottom: 0px; padding: 4px; color: rgb(255, 255, 255);") 广告
+						div#dale_movie_home_top_right.s
+							div(style="position: relative; margin: 0px 0px 20px; display: block; width: 300px; height: 250px;")
+								div(style=" display: inline-block;font-size: 0;overflow: hidden;position: relative;")
+									a(href="https://dsp-click.youdao.com/clk/request.s?slot=f3798df8d024983112296167f94d86ab&k=oJzagE%2Fg8FMldCdW%2B09FOJ10Bw6r2xPspA0vI97abVnXxo%2BoRxcJpjjAgKuViCqvrwou2TfNvjWvGgTc0iLuVTZ6w5UB04yltwhnCuY9LVKNFWA4IPPMjnkuerSyFRJmysxS7gggY5KqHSMX5pm0Wr00bEExw8zjaVVaxGuPPrKkF3Ndy7LCHs0d%2FPHLO8OQs5C2r5p76LJvGV1pr0%2Fr4i5DkWltt40G4YRDOg2S20%2BOTMC86bt86i30udJzdx3ymt3ILVg%2B5MCC%2FxZkWli93J9KpOL8cXYL9FPCH%2BxSdLMJ2nbscgN9lBWtqY8T2X%2FfYvmM6yrC2gPMQlkIgisrc21xBG59UmhfTJCBUXZQRkXwwDMMLJbPPcd7J%2BAXQTzu5J2s4tPzbnVq4EgIsx%2B3bcamRdIrjBVRU5Q1BKJIxtMxDWp%2FfsKzrjuzPzOIEkTr8l%2BN9vTKqVkjVHyX8erVsAMOojMbZ4vU2T39hDWymIxlJtPKf0CvrJUznJX543fHHbbhAHDM6TvmqltUmuT6IvTQmSWzSwXmHU65vXfRL5trcWyHFGR9oqY1YGQaqvFiM7SFwNVVPxoCSVPxwe6PQiB3Jz%2BxXz36JDjQHYsfZHZILIi4BGJiuKf2O2suBm0fx3JyLeYjH6rXd3Zgho4Y49ABpSI8fc91nZsZyATM2HPfwAFpcWuB8bQ3k767xv7wOdu2oY7H4foBqpw9aSHyEeuKRBWcbdzRycM55I6MxOhhkuAmWlmWfMjfH4NkuKsDJOR5t8aXQKklWTtBewgdWpKx%2F49De2GjO4GgWZNaXhqfl0ZmtuPHQ%2BZag7aL3KeQFTsWqe3mVSeyJln2%2BBzDWT2F6rjFboFTmKyuYj%2FBB9wojYELUQ%2FcvRGglu3PwJJGYNj4ioG8LzdSEl1meKry2tfGj6hHFwmmOMCAq5WIKq%2FXxo%2BoRxcJpjjAgKuViCqv18aPqEcXCaY4wICrlYgqr%2BuEskluP%2Ba60zAlQsmc9i4%3D&youdao_bid=37b5f9e9-bd48-41a4-b678-dd18607bf632&youdao_deviceId=38bc05e3fe1760422d134436ae35e74b" target="_blank")
+										img(src="https://oimagea4.ydstatic.com/image?id=1229190796194666709&product=adpublish&w=300&h=250")
+								div(style="line-height: 1; text-align: center; background-color: rgba(0, 0, 0, 0.3); font-size: 12px; position: absolute; right: 0px; bottom: 0px; padding: 4px; color: rgb(255, 255, 255);") 广告
+						
+block srcipts
+	script(src="./js/moreMusic.js")
+
+
+

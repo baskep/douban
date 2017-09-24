@@ -1,5 +1,119 @@
-{ "_id" : { "$oid" : "598358bd349579f2d4c6dd7d" }, "movie" : { "$oid" : "59830456d564301145e94689" }, "from" : { "$oid" : "598031f6cce213a92001e918" }, "content" : "nice", "meta" : { "updateAt" : { "$date" : "2017-08-03T17:09:48.811+0000" }, "createAt" : { "$date" : "2017-08-03T17:09:17.533+0000" } }, "reply" : [ { "from" : { "$oid" : "59803217cce213a92001e919" }, "content" : "一般", "_id" : { "$oid" : "598358dc349579f2d4c6dd7e" } } ], "__v" : 1 }
-{ "_id" : { "$oid" : "59835ab0349579f2d4c6dd7f" }, "movie" : { "$oid" : "59830456d564301145e94689" }, "from" : { "$oid" : "59803217cce213a92001e919" }, "content" : "你是真的皮", "meta" : { "updateAt" : { "$date" : "2017-08-03T17:17:36.722+0000" }, "createAt" : { "$date" : "2017-08-03T17:17:36.722+0000" } }, "reply" : [  ], "__v" : 0 }
-{ "_id" : { "$oid" : "59905c613ce46a1a49627b78" }, "movie" : { "$oid" : "598d81e3c2f623a5248c2843" }, "from" : { "$oid" : "5986fc8e57fc9f5235b5f445" }, "content" : "好看", "meta" : { "updateAt" : { "$date" : "2017-08-13T14:04:38.338+0000" }, "createAt" : { "$date" : "2017-08-13T14:04:17.306+0000" } }, "reply" : [ { "from" : { "$oid" : "5986fc8e57fc9f5235b5f445" }, "content" : "非常好看", "_id" : { "$oid" : "59905c763ce46a1a49627b79" } } ], "__v" : 1 }
-{ "_id" : { "$oid" : "59916134ef312b0a6da101b9" }, "movie" : { "$oid" : "598d81e3c2f623a5248c2843" }, "from" : { "$oid" : "5986fc8e57fc9f5235b5f445" }, "content" : "壁纸狂魔-新海诚", "meta" : { "updateAt" : { "$date" : "2017-08-14T09:13:23.128+0000" }, "createAt" : { "$date" : "2017-08-14T08:37:08.043+0000" } }, "reply" : [ { "from" : { "$oid" : "5986fc8e57fc9f5235b5f445" }, "content" : "你说的很对", "_id" : { "$oid" : "5991613eef312b0a6da101ba" } }, { "from" : { "$oid" : "5986fdce9d08c15dc15de858" }, "content" : "我保存了几张当壁纸", "_id" : { "$oid" : "599169b3ef312b0a6da101bb" } } ], "__v" : 2 }
-{ "_id" : { "$oid" : "5995bfdd647813899915320c" }, "movie" : { "$oid" : "598d81e3c2f623a5248c2843" }, "from" : { "$oid" : "5986fc8e57fc9f5235b5f445" }, "content" : "OK的", "meta" : { "updateAt" : { "$date" : "2017-08-17T16:10:06.004+0000" }, "createAt" : { "$date" : "2017-08-17T16:10:06.004+0000" } }, "reply" : [  ], "__v" : 0 }
+{ 
+    "_id" : ObjectId("598358bd349579f2d4c6dd7d"), 
+    "movie" : ObjectId("59830456d564301145e94689"), 
+    "from" : ObjectId("598031f6cce213a92001e918"), 
+    "content" : "nice", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-03T17:09:48.811+0000"), 
+        "createAt" : ISODate("2017-08-03T17:09:17.533+0000")
+    }, 
+    "reply" : [
+        {
+            "from" : ObjectId("59803217cce213a92001e919"), 
+            "content" : "一般", 
+            "_id" : ObjectId("598358dc349579f2d4c6dd7e")
+        }
+    ], 
+    "__v" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("59835ab0349579f2d4c6dd7f"), 
+    "movie" : ObjectId("59830456d564301145e94689"), 
+    "from" : ObjectId("59803217cce213a92001e919"), 
+    "content" : "你是真的皮", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-03T17:17:36.722+0000"), 
+        "createAt" : ISODate("2017-08-03T17:17:36.722+0000")
+    }, 
+    "reply" : [
+
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59905c613ce46a1a49627b78"), 
+    "movie" : ObjectId("598d81e3c2f623a5248c2843"), 
+    "from" : ObjectId("5986fc8e57fc9f5235b5f445"), 
+    "content" : "好看", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-13T14:04:38.338+0000"), 
+        "createAt" : ISODate("2017-08-13T14:04:17.306+0000")
+    }, 
+    "reply" : [
+        {
+            "from" : ObjectId("5986fc8e57fc9f5235b5f445"), 
+            "content" : "非常好看", 
+            "_id" : ObjectId("59905c763ce46a1a49627b79")
+        }
+    ], 
+    "__v" : NumberInt(1)
+}
+{ 
+    "_id" : ObjectId("59916134ef312b0a6da101b9"), 
+    "movie" : ObjectId("598d81e3c2f623a5248c2843"), 
+    "from" : ObjectId("5986fc8e57fc9f5235b5f445"), 
+    "content" : "壁纸狂魔-新海诚", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-14T09:13:23.128+0000"), 
+        "createAt" : ISODate("2017-08-14T08:37:08.043+0000")
+    }, 
+    "reply" : [
+        {
+            "from" : ObjectId("5986fc8e57fc9f5235b5f445"), 
+            "content" : "你说的很对", 
+            "_id" : ObjectId("5991613eef312b0a6da101ba")
+        }, 
+        {
+            "from" : ObjectId("5986fdce9d08c15dc15de858"), 
+            "content" : "我保存了几张当壁纸", 
+            "_id" : ObjectId("599169b3ef312b0a6da101bb")
+        }
+    ], 
+    "__v" : NumberInt(2)
+}
+{ 
+    "_id" : ObjectId("5995bfdd647813899915320c"), 
+    "movie" : ObjectId("598d81e3c2f623a5248c2843"), 
+    "from" : ObjectId("5986fc8e57fc9f5235b5f445"), 
+    "content" : "OK的", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-17T16:10:06.004+0000"), 
+        "createAt" : ISODate("2017-08-17T16:10:06.004+0000")
+    }, 
+    "reply" : [
+
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59a55e751aa75bf76b2506ce"), 
+    "movie" : ObjectId("598d81e3c2f623a5248c2843"), 
+    "from" : ObjectId("5986fc8e57fc9f5235b5f445"), 
+    "content" : "很好", 
+    "meta" : {
+        "updateAt" : ISODate("2017-08-29T12:30:45.602+0000"), 
+        "createAt" : ISODate("2017-08-29T12:30:45.602+0000")
+    }, 
+    "reply" : [
+
+    ], 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59aca0f09531bb8ec8014384"), 
+    "movie" : ObjectId("598d8210c2f623a5248c2844"), 
+    "from" : ObjectId("5986fc8e57fc9f5235b5f445"), 
+    "content" : "好看", 
+    "meta" : {
+        "updateAt" : ISODate("2017-09-04T02:04:06.899+0000"), 
+        "createAt" : ISODate("2017-09-04T00:40:16.123+0000")
+    }, 
+    "reply" : [
+        {
+            "from" : ObjectId("5986fc8e57fc9f5235b5f445"), 
+            "content" : "不错", 
+            "_id" : ObjectId("59acb49680382fc36ca43f39")
+        }
+    ], 
+    "__v" : NumberInt(1)
+}

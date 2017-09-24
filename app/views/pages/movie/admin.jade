@@ -84,6 +84,28 @@ block content
           label.col-sm-2.control-label(for="inputStarScore") 豆瓣星级
           .col-sm-10
             input#inputStarScore.form-control(type="text", name="movie[starScore]", value=movie.starScore)
+
+        .form-group
+          label.col-sm-2.control-label(for="inputStars5") 五星人数
+          .col-sm-10
+            input#inputStars5.form-control(type="text", name="movie[stars5]", value=movie.stars5)
+        .form-group
+          label.col-sm-2.control-label(for="inputStars4") 四星人数
+          .col-sm-10
+            input#inputStars4.form-control(type="text", name="movie[stars4]", value=movie.stars4)
+        .form-group
+          label.col-sm-2.control-label(for="inputStars3") 三星人数
+          .col-sm-10
+            input#inputStars3.form-control(type="text", name="movie[stars3]", value=movie.stars3)
+        .form-group
+          label.col-sm-2.control-label(for="inputStars2") 二星人数
+          .col-sm-10
+            input#inputStars2.form-control(type="text", name="movie[stars2]", value=movie.stars2)
+        .form-group
+          label.col-sm-2.control-label(for="inputStars1") 一星人数
+          .col-sm-10
+            input#inputStars1.form-control(type="text", name="movie[stars1]", value=movie.stars1)
+
         .form-group
           label.col-sm-2.control-label(for="inputSummary") 电影简介
           .col-sm-10
