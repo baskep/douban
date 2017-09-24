@@ -62,9 +62,9 @@
 
 ## 5.项目整体效果
    5.1.首页 <br>
-   ![image](https://github.com/zt14362/MovieWebSite/raw/master/example/index.png) <br>
+   ![image](https://github.com/zt14362/MovieWebSite/raw/master/example/movieIndex.png) <br>
    5.2.详情页 <br>
-   ![image](https://github.com/zt14362/MovieWebSite/raw/master/example/detail.png) <br>
+   ![image](https://github.com/zt14362/MovieWebSite/raw/master/example/movieDetail.png) <br>
    5.3.选电影页 <br>
    ![image](https://github.com/zt14362/MovieWebSite/raw/master/example/MoreMovie.png)
  
