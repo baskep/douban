@@ -13,7 +13,7 @@
     "express-static": "^1.2.4",
     "jade": "^1.11.0",
     "moment": "^2.18.1",
-    "mongoose": "^4.11.4",
+    "mongoose": "^5.9.25",
     "morgan": "^1.8.2",
     "serve-static": "^1.12.3",
     "underscore": "^1.8.3"
